@@ -7,7 +7,9 @@ category: Gems
 
 While working on the news aggregator for [localmotion](http://localmotion.io), I needed a way to validate domains. However, I preferred a different solution to those out there. I typically like to leverage the `ActiveModel::EachValidator` to ensure that my validations are simple and easy to read in my model:
 
-    validates :url, url_format: true
+```ruby
+validates :url, url_format: true
+```
 
 So, I built my own which can be found on [Github](https://github.com/johnotander/url_format) and [RubyGems](http://rubygems.org/gems/url_format).
 
@@ -15,12 +17,16 @@ I took advantage of the `URI` library and a thorough Regex designed by [Dean Per
 
 Then, I also added a domain method so I could get the domain/host from the url for display purposes:
 
-    UrlFormat.get_domain(url)
+```ruby
+UrlFormat.get_domain(url)
+```
 
 I was able to leverage the `URI#parse` method to keep the method clean and simple:
 
-      def self.get_domain(url)
-        host = URI.parse(url).host.downcase
-        host.start_with?('www.') ? host[4..-1] : host
-      rescue URI::InvalidURIError
-      end
+```ruby
+def self.get_domain(url)
+  host = URI.parse(url).host.downcase
+  host.start_with?('www.') ? host[4..-1] : host
+rescue URI::InvalidURIError
+end
+```

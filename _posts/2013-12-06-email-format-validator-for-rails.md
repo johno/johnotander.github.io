@@ -9,32 +9,36 @@ I made a gem called Email Format that utilizes the `validate_each` method that's
 
 The validator itself is very simple, it simply compares the attribute in question to the `EmailRegex::EMAIL_ADDRESS_REGEX` like so:
 
-    class EmailFormatValidator < ActiveModel::EachValidator
-      def validate_each(record, attribute, value)
-        unless value =~ EmailRegex::EMAIL_ADDRESS_REGEX
-          record.errors[attribute] << (options[:message] || "is invalid")
-        end
-      end
+```ruby
+class EmailFormatValidator < ActiveModel::EachValidator
+  def validate_each(record, attribute, value)
+    unless value =~ EmailRegex::EMAIL_ADDRESS_REGEX
+      record.errors[attribute] << (options[:message] || "is invalid")
     end
+  end
+end
+```
 
 So, you can now do the following to validate your email attributes:
 
-    require 'email_format'
-    
-    class Awesome
-      include ActiveModel::Validations
-     
-      attr_accessor :email
-      
-      validates :email, email_format: true
-     end
-     
-     awesome = Awesome.new
+```ruby
+require 'email_format'
 
-     awesome.email = "valid@email.com"
-     awesome.valid? # => true
+class Awesome
+  include ActiveModel::Validations
+ 
+  attr_accessor :email
+  
+  validates :email, email_format: true
+ end
+ 
+ awesome = Awesome.new
 
-     awesome.email = "invalid_email"
-     awesome.valid? # => false
+ awesome.email = "valid@email.com"
+ awesome.valid? # => true
+
+ awesome.email = "invalid_email"
+ awesome.valid? # => false
+```
 
 [See the Github repo](https://github.com/johnotander/email_format)

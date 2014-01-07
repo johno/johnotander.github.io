@@ -18,34 +18,40 @@ If this relationship isn't accomplished with `accepts_nested_attributes_for`, we
 Consider the abstracted new/create actions below:
 ######Note: The parameters in the create action may vary, depending on your form.
 
-    class ParentModelController < ApplicationController
+```ruby
+class ParentModelController < ApplicationController
+
+  def new
+    @parent_model = ParentModel.new
+    @child_model = ChildModel.new
+  end
+  
+  def create
+    @parent_model = ParentModel.new params[:parent_model]
+    @child_model = ChildModel.new params[:child_model]
+    @child_model.parent_model = @parent_model
     
-      def new
-        @parent_model = ParentModel.new
-        @child_model = ChildModel.new
-      end
+    if @parent_model.valid? and @child_model.valid?
+      @parent_model.save!
+      @child_model.save!
       
-      def create
-        @parent_model = ParentModel.new params[:parent_model]
-        @child_model = ChildModel.new params[:child_model]
-        @child_model.parent_model = @parent_model
-        
-        if @parent_model.valid? and @child_model.valid?
-          @parent_model.save!
-          @child_model.save!
-          
-          redirect_to parent_models_path
-        else
-          render :new
-        end
-      end
+      redirect_to parent_models_path
+    else
+      render :new
     end
+  end
+end
+```
 
 
 
 As you can see, the controller becomes rather sloppy. Also, as the models change, since they always do, the upkeep becomes unbearable.  For example, what happens if we decide to add a ChildToTheChildModel?  If this is expected to be created in the same form as the others, we will have an ugly conditional similar to:
 
-    if @parent_model.valid? and @child_model.valid? and @child_to_the_child_model.valid? 
+```ruby
+if @parent_model.valid? and @child_model.valid? and @child_to_the_child_model.valid?
+  #...
+end
+```
 
 We don't want that.
 
@@ -54,17 +60,19 @@ We don't want that.
 
 Consider error messages, which are typically handled by a block similar to what's below.
 
-    <% if @parent_model.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@forest.errors.count, "error") %> prohibited this ParentModel from being saved:</h2>
+```html+erb
+<% if @parent_model.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@forest.errors.count, "error") %> prohibited this ParentModel from being saved:</h2>
 
-        <ul>
-        <% @parent_model.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
+    <ul>
+    <% @parent_model.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
     <% end %>
+    </ul>
+  </div>
+<% end %>
+```
     
 We won't be displaying any error messages if all of them occurred on the child\_model. So, we will have to violate the DRY principle by adding redundant error handling. Additionally, like the consideration made before, what happens as more dependent models are needed? This view redundancy really begins to exhibit side-effects.
 
@@ -83,13 +91,15 @@ Parent => Child => Child to the Child => ... where `child_attributes=(attributes
 
 For this example we will use Forest and Tree models where a Tree `belongs_to` a Forest like so:
 
-    class Forest < ActiveRecord::Base
-      has_many :trees, dependent: :destroy
-    end
+```ruby
+class Forest < ActiveRecord::Base
+  has_many :trees, dependent: :destroy
+end
 
-    class Tree < ActiveRecord::Base
-      belongs_to :forest
-    end
+class Tree < ActiveRecord::Base
+  belongs_to :forest
+end
+```
 
 
 ###So lets start a little project to test this out \([or clone it on github](https://github.com/johnotander/nested_attr.git)\):
@@ -116,49 +126,58 @@ Now, after a migrate, we're ready to get to the code.
 Since the Forest, as the primary(`has_many`) model, will be accepting the nested attributes for the dependent Trees, this is the majority of the model logic will live.  As you will see below, it is simply three lines of syntactic sugar:
 
 ####app/models/forest.rb
-    class Forest < ActiveRecord::Base
-      has_many :trees
-      accepts_nested_attributes_for :trees, allow_destroy: true
-      attr_accessible :trees_attributes
-  
-      attr_accessible :climate, :latitude, :longitude, :name, :size
-  
-      validates_presence_of :name
-      validates_presence_of :size
-      validates_presence_of :climate
-      validates_presence_of :latitude
-      validates_presence_of :longitude
-    end
+
+```ruby
+class Forest < ActiveRecord::Base
+  has_many :trees
+  accepts_nested_attributes_for :trees, allow_destroy: true
+  attr_accessible :trees_attributes
+
+  attr_accessible :climate, :latitude, :longitude, :name, :size
+
+  validates_presence_of :name
+  validates_presence_of :size
+  validates_presence_of :climate
+  validates_presence_of :latitude
+  validates_presence_of :longitude
+end
+```
 
 The `allow_destroy` parameter ensures that the Forest's Trees will be destroyed along with the Forest itself.  If this is desired, the `allow_destroy: true` must be provided, since this functionality is off by default.
 
 The Tree model will remain pretty much the same.
 
 ####app/models/tree.rb
-    class Tree < ActiveRecord::Base
-      belongs_to :forest
-      attr_accessible :common_name, :forest_id, :scientific_name
-  
-      validates_presence_of :common_name
-      validates_presence_of :scientific_name
-    end
+
+```ruby
+class Tree < ActiveRecord::Base
+  belongs_to :forest
+  attr_accessible :common_name, :forest_id, :scientific_name
+
+  validates_presence_of :common_name
+  validates_presence_of :scientific_name
+end
+```
 
 ###Build the Tree in the Forest Controller
 
 The beauty of `accepts_nested_attributes_for` will begin to come out as we dive into the controller.  First off, in order to perform standard CRUD on a Forest and it's Trees, all you need is a `ForestController < ApplicationController` since the Trees themselves will be manipulated through the same form.  So, all we need to do is instantiate the Forest and a Tree like the `new` action below:
 
 ####app/controllers/forests_controller.rb
-    # GET /forests/new
-    # GET /forests/new.json
-    def new
-      @forest = Forest.new
-      @forest.trees.build
 
-      respond_to do |format|
-        format.html # new.html.erb
-        format.json { render json: @forest }
-      end
-    end
+```ruby
+# GET /forests/new
+# GET /forests/new.json
+def new
+  @forest = Forest.new
+  @forest.trees.build
+
+  respond_to do |format|
+    format.html # new.html.erb
+    format.json { render json: @forest }
+  end
+end
+```
 
 This will create the instance variable for `@forest` and a dependent Tree, similar to what `@forest.trees << Tree.new` would achieve.  Additionally, if you wanted to add three Trees to every Forest, you could replace `@forest.trees.build` with `3.times { |t| @forest.trees.build }`.  It's as simple as that.
 
@@ -168,68 +187,76 @@ The first thing I like to do with my forms is to rip out the fields in the form 
 
 ####app/views/forests/_form.html.erb
 
-    <%= form_for(@forest) do |f| %>
-      <% if @forest.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@forest.errors.count, "error") %> prohibited this forest from being saved:</h2>
+```html+erb
+<%= form_for(@forest) do |f| %>
+  <% if @forest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@forest.errors.count, "error") %> prohibited this forest from being saved:</h2>
 
-          <ul>
-            <% @forest.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+      <ul>
+        <% @forest.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-      <%= render partial: 'fields', locals: { f: f } %>
-  
-      <div class="actions">
-        <%= f.submit %>
-      </div>
-    <% end %>
+  <%= render partial: 'fields', locals: { f: f } %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+```
 
 ####app/views/forests/_fields.html.erb
 
-    <div class="field">
-      <%= f.label :name %><br />
-      <%= f.text_field :name %>
-    </div>
-    <div class="field">
-      <%= f.label :size %><br />
-      <%= f.text_field :size %>
-    </div>
-    <div class="field">
-      <%= f.label :latitude %><br />
-      <%= f.text_field :latitude %>
-    </div>
-    <div class="field">
-      <%= f.label :longitude %><br />
-      <%= f.text_field :longitude %>
-    </div>
-    <div class="field">
-      <%= f.label :climate %><br />
-      <%= f.text_field :climate %>
-    </div>
+```html+erb
+<div class="field">
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+</div>
+<div class="field">
+  <%= f.label :size %><br />
+  <%= f.text_field :size %>
+</div>
+<div class="field">
+  <%= f.label :latitude %><br />
+  <%= f.text_field :latitude %>
+</div>
+<div class="field">
+  <%= f.label :longitude %><br />
+  <%= f.text_field :longitude %>
+</div>
+<div class="field">
+  <%= f.label :climate %><br />
+  <%= f.text_field :climate %>
+</div>
+```
 
 We will also add a `_fields.html.erb` file for Trees.
 
 ####app/views/trees/_fields.html.erb
 
-    <h3>Tree</h3>
-    <div class="field">
-      <%= f.label :common_name %><br />
-      <%= f.text_field :common_name %>
-    </div>
-    <div class="field">
-      <%= f.label :scientific_name %><br />
-      <%= f.text_field :scientific_name %>
-    </div>
+```html+erb
+<h3>Tree</h3>
+<div class="field">
+  <%= f.label :common_name %><br />
+  <%= f.text_field :common_name %>
+</div>
+<div class="field">
+  <%= f.label :scientific_name %><br />
+  <%= f.text_field :scientific_name %>
+</div>
+```
 
 Now, we just need to render the fields partial for each Tree that belongs to the instantiated Forest.  In order to do this, we just need to include the following at the bottom of the `app/view/forests/_fields.html.erb` partial:
 
-    <%= f.fields_for :trees do |t| %>
-       <%= render partial: 'trees/fields', locals: { f: t } %>
-    <% end %>
+```html+erb
+<%= f.fields_for :trees do |t| %>
+   <%= render partial: 'trees/fields', locals: { f: t } %>
+<% end %>
+```
 
 This snippet ensures that the `trees/fields` partial will be rendered for each Tree that belongs to `@forest`.  As you can see, we are also passing a local variable with the argument `locals: { f: t }`, which is sending the form builder to the fields partial.  Since the `|t|` is part of the `f.fields_for :trees do |t|` block, Rails automagically increments the attributes for each Tree.  That way, the parameters that are passed for each Tree are separate, ensuring that a later Tree's attributes in the parameters hash won't overwrite a predecessor.
 
@@ -237,4 +264,4 @@ This snippet ensures that the `trees/fields` partial will be rendered for each T
 
 Just like that we have implemented a `has_many`/`belongs_to` relationship which requires only one controller and only one form view partial for the dependent model, Tree in this case.  Pretty clean, pretty simple, absolutely automagical.
 
-Don't forget to check the [source](https://github.com/johnotander/nested_attr) if something's unclear, or email me: <ramblings@johnotander.com>.
+Don't forget to check the [source](https://github.com/johnotander/nested_attr) if something's unclear, or email me: <johnotander@icloud.com>.
