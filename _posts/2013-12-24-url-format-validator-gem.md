@@ -2,7 +2,7 @@
 layout: post
 title: Url Format Validator, Yet Another Gem
 summary: Validate urls and format them with an all-inclusive gem.
-category: Gem
+category: Ruby Gems
 ---
 
 While working on the news aggregator for [localmotion](http://localmotion.io), I needed a way to validate domains. However, I preferred a different solution to those out there. I typically like to leverage the `ActiveModel::EachValidator` to ensure that my validations are simple and easy to read in my model:
