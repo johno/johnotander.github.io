@@ -2,7 +2,7 @@
 layout: post
 title: Email Format Validator for Rails
 summary: Validate urls and format them with an all-inclusive gem.
-category: Ruby Gems
+category: Gems
 ---
 
 I made a gem called Email Format that utilizes the `validate_each` method that's included in `ActiveModel::Validations`. It uses the [email_regex](https://github.com/dougwig/email_regex) gem written by Doug Wiegley which "provides a valid email regex that conforms to most valid RFC edges cases (disallows backticks), and allows for a few illegal patterns that are in common use".

@@ -2,7 +2,7 @@
 layout: post
 title: Link With Icon, A Gem
 summary: Incorporate links with icons using a fancy helper to ensure readable code.
-category: Ruby Gems
+category: Gems
 ---
 
 ## A wrapper for the Rails link_to helper for icons.
