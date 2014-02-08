@@ -5,6 +5,28 @@ summary: After giving a lightening talk on Decorators on Rails, I figured the sl
 category: Rails
 ---
 
-This is the accompanying blog post for a similarly titled lightening talk for [localmotion](http://localmotion.io).
+This is the accompanying blog post for a similarly titled lightening talk for a [localmotion](http://localmotion.io) #brewby.  [The slides can be found here.](http://johnotander.com/decorators_on_rails)
 
-[The slides.](http://johnotander.com/decorators_on_rails)
+Decorators can be very useful for cleaning up view logic and models in a Rails application. The [Draper gem](https://github.com/drapgergem/draper) makes it simple, and worthwhile, to incorporate into an existing codebase.
+
+## What is a decorator?
+
+The Decorator pattern is a design pattern that allows behavior to be added to an individual object without affecting the behavior of other objects from the same class. 
+
+This is useful because we can add additional behavior to an instantiated model, like `@user`, before passing it on to the template from the controller. However, in other contexts, the User model, doesn't have the added behavior that's the result of the decoration. This helps to separate concerns, while still adding necessary functionality to an object when appropriate.
+
+## Why do we care?
+
+<div class="message">
+  Your views should be stupid.
+</div>
+
+I like to use the analogy that views should read similarly to a shopping list. There shouldn't be any complexity or logic. It should just simply read:
+
+  - Email
+  - Name
+  - Joined date
+  - Favorite color
+
+However, I'll be the first to admit, that my Rails views don't start out looking like that. _At all_.
+
