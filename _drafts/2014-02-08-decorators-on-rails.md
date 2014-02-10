@@ -28,5 +28,7 @@ I like to use the analogy that views should read similarly to a shopping list. T
   - Joined date
   - Favorite color
 
-However, I'll be the first to admit, that my Rails views don't start out looking like that. _At all_.
+However, I'll be the first to admit, that Rails views don't often look like that. _At all_.
+
+
 
