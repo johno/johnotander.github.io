@@ -28,7 +28,12 @@ I like to use the analogy that views should read similarly to a shopping list. T
   - Joined date
   - Favorite color
 
-However, I'll be the first to admit, that Rails views don't often look like that. _At all_.
+However, I'll be the first to admit, that Rails views don't often look like that. _At all_.  When an app is still in it's initial iterations of development, this isn't always the worst thing in the world, either. 
+
+### A disclaimer
+
+Typically in prototyping, expediency wins. So, it's not usually advisable to start incorporating the Decorator pattern in early stage apps. Your views and models should be growing rapidly, and bursting at the seams before you consider utilizing Draper. The Decorator/Presenter pattern should be treating painful symptoms like complex views and unmaintainable models.
+
 
 
 
