@@ -28,7 +28,7 @@ I like to use the analogy that views should read similarly to a shopping list. T
   - Joined date
   - Favorite color
 
-However, I'll be the first to admit, that Rails views don't often look like that. _At all_.  When an app is still in it's initial iterations of development, this isn't always the worst thing in the world, either. 
+However, I'll be the first to admit, that Rails views don't often look like that. _At all_.  It's usually closer to a Magical Realism novel. When an app is still in it's initial iterations of development, this isn't always the worst thing in the world, either. Sometimes you just need to get something shipped in order to see if it's even worth refactoring.
 
 ### A disclaimer
 
