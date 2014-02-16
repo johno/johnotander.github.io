@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create a pretty browser window mockup in HTML+Sass instead of using an image.
-summary: Rather than using images for simple splash pages and mockups, let's use some Sass.
+title: Create a pretty browser window mockup in HTML+Scss instead of using an image.
+summary: Rather than using images for simple splash pages and mockups, let's use some Scss.
 category: Design
 ---
 
@@ -36,7 +36,7 @@ The codepen: <http://codepen.io/johnotander/pen/pfLhy>
 </body>
 ```
 
-```sass
+```scss
 $bottomColor: #E2E2E1;
 $topColor: lighten($bottomColor, 2%);
 
