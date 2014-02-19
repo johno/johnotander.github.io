@@ -7,7 +7,7 @@ category: Rails
 
 This is the accompanying blog post for a similarly titled lightening talk for a [localmotion](http://localmotion.io) #brewby.  [The slides can be found here.](http://johnotander.com/decorators_on_rails)
 
-Decorators can be very useful for cleaning up view logic and models in a Rails application. The [Draper gem](https://github.com/drapgergem/draper) makes it simple, and worthwhile, to incorporate the pattern into an existing codebase. Resulting in something easier to maintain, with presentation logic in it's own special object.
+Decorators can be useful for cleaning up view logic and models in a Rails application. The [Draper gem](https://github.com/drapgergem/draper) makes it essentially seamless to integrate, resulting in a more maintainable codebase that's easier ensure full test coverage. 
 
 ## What is a decorator?
 
