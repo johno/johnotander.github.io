@@ -37,7 +37,8 @@ Ruby, Rails, AJAX, Javascript/Coffescript, jQuery, JSON, CSS, Sass/Scss, iOS, Ob
 
 
 #### Uceem Networks, Developer - Boise, ID   
-_Summer 2012 - present_  
+_Summer 2012 - Present_
+<br>
 Responsible for developing and designing a cloud-based dashboard for network configuration and usage analytics. Leading the design of all aspects of the web application and homepage, while being an integral component of the development of the entire stack.
 
 Duties and Responsibilities   
@@ -51,19 +52,23 @@ Duties and Responsibilities
   - Collaborating and coordinating with a small, nimble team
 
 #### Margin.io, Co-founder - Boise, ID   
-_Summer 2013 - present_   
+_Summer 2013 - present_
+<br>  
 Lead developer/designer for a web application consultancy with clients that include a startup from the Silicon Valley. Tasks include managing, coordinating, and collaborating with a development team, delivering contracts on a strict deadline, and ensuring company-wide adherence to coding best practices.
 
 #### Freelance Web Design/Development - Boise, ID   
-_Summer 2010 - Summer 2012_   
+_Summer 2010 - Summer 2012_
+<br>  
 Designed custom, static websites with clean, responsive CSS, HTML, and Javascript/JQuery.
 
 #### Computers Unlimited, Intern - Bozeman, MT   
-_Summer 2009_   
+_Summer 2009_
+<br>
 Primarily tasked with debugging large-scale information management software in C#, SQL, Synergy, and converting antiquated procedural code to a new, Object-Oriented software system.
 
 #### Hauser Architects, Intern - San Francisco, CA   
-_Summer 2007_   
+_Summer 2007_
+<br>
 Primarily tasked with web development, design, and maintenance.
 
 ## Activities
