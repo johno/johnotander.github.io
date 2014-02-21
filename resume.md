@@ -52,7 +52,7 @@ Duties and Responsibilities
   - Collaborating and coordinating with a small, nimble team
 
 #### Margin.io, Co-founder - Boise, ID   
-_Summer 2013 - present_
+_Summer 2013 - Present_
 <br>  
 Lead developer/designer for a web application consultancy with clients that include a startup from the Silicon Valley. Tasks include managing, coordinating, and collaborating with a development team, delivering contracts on a strict deadline, and ensuring company-wide adherence to coding best practices.
 
