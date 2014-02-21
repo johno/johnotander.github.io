@@ -40,7 +40,7 @@ Ruby, Rails, AJAX, Javascript/Coffescript, jQuery, JSON, CSS, Sass/Scss, iOS, Ob
 _Summer 2012 - present_  
 Responsible for developing and designing a cloud-based dashboard for network configuration and usage analytics. Leading the design of all aspects of the web application and homepage, while being an integral component of the development of the entire stack.
 
-##### Duties and Responsibilities
+Duties and Responsibilities   
 
   - Leading the design of a beautiful dashboard and user interface
   - Full stack Ruby on Rails development, from server configuration to button placement
