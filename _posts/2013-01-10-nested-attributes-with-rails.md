@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Nested Attributes with Rails
-summary: An example of the awesomeness of accepts_nested_attributes_for with Rails models and forms.
+title: Nested Attributes with Rails 3
+summary: An example of the awesomeness of accepts_nested_attributes_for with Rails 3 models and forms.
 category: Rails
 ---
 
