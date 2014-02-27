@@ -5,6 +5,8 @@ summary: Rather than using images for simple splash pages and mockups, let's use
 category: Design
 ---
 
+Beautifully presenting web pages and apps in context can really help draw in potential user.  This typically consists of placing screenshots in browser windows, phones, etc. with photo editing software. However, I like to avoid Photoshop like the plague, so I wanted to figure out a way to do the same in a text editor. So, I decided to concoct a CSS/HTML solution.
+
 The codepen: <http://codepen.io/johnotander/pen/pfLhy>
 
 ```html
