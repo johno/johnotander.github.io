@@ -5,7 +5,7 @@ summary: After giving a lightening talk on Decorators on Rails, I figured the sl
 category: Rails
 ---
 
-This is the accompanying blog post for a similarly titled lightening talk for a [localmotion](http://localmotion.io) #brewby.  [The slides can be found here.](http://johnotander.com/decorators_on_rails)
+This is the accompanying blog post for an equivalently titled lightening talk for a [localmotion](http://localmotion.io) #brewby.  [The slides can be found here.](http://johnotander.com/decorators_on_rails)
 
 Decorators can be useful for cleaning up view logic and models in a Rails application. The [Draper gem](https://github.com/drapgergem/draper) makes it essentially seamless to integrate, resulting in a more maintainable codebase that's easier ensure full test coverage. 
 
