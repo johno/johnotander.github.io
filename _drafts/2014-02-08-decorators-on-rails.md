@@ -30,11 +30,44 @@ I like to use the analogy that views should read similarly to a shopping list. T
 
 However, I'll be the first to admit, that Rails views don't often look like that. _At all_.  It's usually closer to a Magical Realism novel. When an app is still in it's initial iterations of development, this isn't always the worst thing in the world, either. Sometimes you just need to get something shipped in order to see if it's even worth refactoring.
 
-### A disclaimer
+As Steve Klabnik eloquently stated:
+
+> The whole idea of logic in templates leads to all kinds of problems. They're hard to test, they're hard to read, and it's not just a slippery slope, but a steep one. Things go downhill rapidly.
+
+## A disclaimer
 
 Typically in prototyping, expediency wins. So, it's not usually advisable to start incorporating the Decorator pattern in early stage apps. Your views and models should be growing rapidly, and bursting at the seams before you consider utilizing Draper. The Decorator/Presenter pattern should be treating painful symptoms like complex views and unmaintainable models.
 
+## A fairly typical view
 
+```html+erb
+<h1>Show user</h1>
+
+<dl class="dl-horizontal">
+  <% if @user.public_email %>
+    <dt>Email:</dt>
+    <dd><%= @user.email %></dd>
+  <% else %>
+    <dt>Email Unavailable:</dt>
+    <dd><%= link_to 'Request Email', '#', class: 'btn btn-default btn-xs' %></dd>
+  <% end %>
+
+  <dt>Name:</dt>
+  <dd>
+    <% if @user.first_name || @user.last_name %>
+      <%= "#{ @user.first_name } #{ @user.last_name }".strip %>
+    <% else %>
+      No name provided.
+    <% end %>
+  </dd>
+  
+  <dt>Joined:</dt>
+  <dd><%= @user.created_at.strftime("%A, %B %e") %></dd>
+  
+  <!-- ... -->
+  
+</dl>
+```
 
 
 
