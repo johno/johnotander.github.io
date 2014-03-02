@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create a pretty browser window mockup in HTML+Scss instead of using an image.
-summary: Rather than using images for simple splash pages and mockups, let's use some Scss.
+title: Create a pretty browser window mockup in HTML+CSS instead of using an image.
+summary: This ensures that the content can be changed at will be just changing a tag in the HTML rather than opening up Photoshop.
 category: Design
 ---
 
