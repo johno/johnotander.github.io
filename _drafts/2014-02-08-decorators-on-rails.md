@@ -69,5 +69,8 @@ Typically in prototyping, expediency wins. So, it's not usually advisable to sta
 </dl>
 ```
 
+I like my views to read similarly to a shopping list. It lists off the information without any extra cruft. However, the view above doesn't exactly do that. The first place to start would be moving the view logic into helpers and the User model. That way, at least the view itself will read easily. 
+
+Though, this begins to muddy up your concerns. String formatting of a model's attributes doesn't belong in a helper because it's data sensitive, but it doesn't belong in the model because it isn't business logic. This is where the decorator comes in. When view logic doesn't exactly belong here nor there, it could be appropriate to be delegated to a decorator.
 
 
