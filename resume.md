@@ -5,7 +5,7 @@ page-title: My professional self.
 ---
 
 ## John Otander
-2518 W. Bella St. | Boise, ID 83702   
+Boise, ID 83702   
 [johnotander@gmail.com](mailto:johnotander@gmail.com) | [johnotander.com](http://www.johnotander.com) | [github.com/johnotander](https://github.com/johnotander)
 
 Software craftsman with experience in all facets of web application development. Significant expertise in web/mobile design and user experience by creating aesthetically pleasing user interfaces and intuitive interactions. Skilled at developing modern, RESTful applications with data analytics, 3rd-party API integration, and efficient database queries.
