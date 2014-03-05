@@ -12,7 +12,7 @@ $ bundle show rspec
 # => /Users/johnotander/.rvm/gems/ruby-2.1.1/gems/rspec-2.14.1
 ```
 
-However, I wanted to make it just as simple to actually open the gem in Sublime Text, so I wrote the following bash function that's included in my Zsh config (.zshrc):
+However, I wanted to make it just as simple to open the gem in Sublime Text. So I wrote the following bash function:
 
 ```bash
 function gs () {
@@ -20,9 +20,12 @@ function gs () {
 }
 ```
 
+This function can be placed in your Zsh config, `.zshrc`.
+
 Just like that, I can now open up the source with:
 
 ```bash
 $ gs rspec
 ```
 
+Hooray.
