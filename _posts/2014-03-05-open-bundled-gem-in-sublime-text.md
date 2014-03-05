@@ -1,0 +1,28 @@
+---
+layout: post
+title: Open a Bundled Gem in Sublime Text
+summary: Often times when I'm debugging, I find it very valuable to be able to quickly open up a gem that I'm using and read the source. Now it's just a simple command.
+category: Zsh
+---
+
+Bundler provides a wonderful command to find the location of a bundled gem. For example, if I wanted to see the location of the gem `rspec`, I could do the following:
+
+```bash
+$ bundle show rspec
+# => /Users/johnotander/.rvm/gems/ruby-2.1.1/gems/rspec-2.14.1
+```
+
+However, I wanted to make it just as simple to actually open the gem in Sublime Text, so I wrote the following bash function that's included in my Zsh config (.zshrc):
+
+```bash
+function gs () {
+  st $( bundle show $1 )
+}
+```
+
+Just like that, I can now open up the source with:
+
+```bash
+$ gs rspec
+```
+
