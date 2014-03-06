@@ -34,6 +34,6 @@ Hooray.
 
 You can use the `$ bundle open rspec` command which uses your `$EDITOR` environment variable, but it will be deprecating in future versions of bundler.
 
-<blockquote class="twitter-tweet" lang="en"><p>&quot;bundle open &lt;gem_name&gt;&quot; is a great, easy way to learn about the libraries and frameworks you&#39;re using. Read the source!</p>&mdash; DHH (@dhh) <a href="https://twitter.com/dhh/statuses/440843559017906176">March 4, 2014</a></blockquote>
+<blockquote class="twitter-tweet" lang="en"><p><a href="https://twitter.com/dhh">@dhh</a> <a href="https://twitter.com/search?q=%24EDITOR&amp;src=ctag">$EDITOR</a> `bundle show &lt;gem_name&gt;`. bundle open is going away in future versions</p>&mdash; GEBYYZNFGRE 9000 (@ryanbigg) <a href="https://twitter.com/ryanbigg/statuses/440856311790841856">March 4, 2014</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
