@@ -89,6 +89,7 @@ $ rails generate decorator User
 ```
 
 #### The default decorator.
+
 Found in app/decorators/user_decorator.rb
 
 ```ruby
@@ -99,12 +100,14 @@ end
 
 #### Adding some specs.
 
+Let's make some red F's before we begin adding our new decorator functionality.
+
 ```ruby
 require 'spec_helper'
 
 describe UserDecorator do
 
-  let(:first_name) { 'John'  }
+  let(:first_name)  { 'John'  }
   let(:last_name)  { 'Smith' }
 
   let(:user) { FactoryGirl.build(:user, 
@@ -115,14 +118,7 @@ describe UserDecorator do
 
   describe '.fullname' do
 
-    context 'without a first name' do
-
-      before { user.first_name = '' }
-
-      it 'should return the last name' do
-        expect(decorator.full_name).to eq(last_name)
-      end
-    end
+    #...
 
     context 'with a first and last name' do
 
@@ -142,6 +138,79 @@ describe UserDecorator do
         expect(decorator.full_name).to eq('No name provided.')
       end
     end
+
+    # ...
+
   end
 end
+```
+
+Now, we just need to implement the decorator:
+
+```ruby
+class UserDecorator < Draper::Decorator
+  delegate_all
+
+  def email_or_request_button
+    public_email ? email : h.link_to('Request Email', '#', class: 'btn btn-default btn-xs').html_safe
+  end
+
+  def full_name
+    if first_name.blank? && last_name.blank?
+      'No name provided.'
+    else
+      "#{ first_name } #{ last_name }".strip
+    end
+  end
+
+  def joined_at
+    created_at.strftime("%B %Y")
+  end
+end
+```
+
+Note the `h` is used to access view helpers, if you'd like to avoid that you can include the lazy helper module:
+
+```ruby
+include Draper::LazyHelpers
+```
+
+#### Implementing the controller.
+
+```ruby
+class UsersController < ApplicationController
+  before_action :do_stuff
+
+  # GET /users
+  # GET /users.json
+  def index
+    @users = User.all.decorate
+  end
+
+  # GET /users/1
+  # GET /users/1.json
+  def show
+    @user = User.find(params[:id]).decorate
+  end
+end
+```
+
+## The result
+
+A sexy, terse view.
+
+```html+erb
+<h1><%= @user.full_name %></h1>
+
+<dl class="dl-horizontal">
+  <dt><%= @user.email_attr_text %></dt>
+  <dd><%= @user.email_or_request_button %></dd>
+
+  <dt>Name:</dt>
+  <dd><%= @user.full_name %></dd>
+  
+  <dt>Joined:</dt>
+  <dd><%= @user.joined_at %></dd>
+  
+  <!-- ... -->
 ```
