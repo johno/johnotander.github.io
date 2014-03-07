@@ -5,9 +5,9 @@ summary: After giving a lightening talk on Decorators on Rails, I figured the sl
 category: Rails
 ---
 
-This is the accompanying blog post for an equivalently titled lightening talk for a [localmotion](http://localmotion.io) #brewby.  [The slides can be found here.](http://johnotander.com/decorators_on_rails)
+This is the blog post for an equivalently titled lightening talk I gave for a [localmotion #brewby](http://localmotion.io).  The slides can be found on [github](http://johnotander.com/decorators_on_rails).
 
-Decorators can be useful for cleaning up view logic and models in a Rails application. The [Draper gem](https://github.com/drapgergem/draper) makes it essentially seamless to integrate, resulting in a more maintainable codebase that's easier ensure full test coverage. 
+Decorators can be useful for cleaning up view logic and models in a Rails application. The [Draper gem](https://github.com/drapgergem/draper) makes it essentially seamless to integrate, resulting in a more maintainable codebase that's easier to ensure full test coverage and happy developers. 
 
 ## What is a decorator?
 
@@ -79,9 +79,13 @@ This ensures ease of testing, because you can focus on only view related logic i
 
 ## Getting set up with Draper
 
+You know the drill, add it to your gem file.
+
 ```ruby
 gem 'draper'
 ```
+
+Then, install and run the generator for the model you'd like to decorate.
 
 ```bash
 $ bundle install
@@ -90,7 +94,7 @@ $ rails generate decorator User
 
 #### The default decorator.
 
-Found in app/decorators/user_decorator.rb
+Now, after the generator, there's a happy place for all the decorators. This helps to keep your different app components separate, which is especially useful as the complexity increases. The generated `UserDecorator` can be found in app/decorators/user_decorator.rb
 
 ```ruby
 class UserDecorator < Draper::Decorator
@@ -177,6 +181,8 @@ include Draper::LazyHelpers
 
 #### Implementing the controller.
 
+Now, you just need to call `.decorate` on any `ActiveRecord` object. Additionally, in Rails 4 you can call `.decorate` on a collection because it returns an `ActiveRecord::Relation` rather than an array. With Rails 3 you can decorate a collection with: `UserDecorator.decorate_collection(User.all)`.
+
 ```ruby
 class UsersController < ApplicationController
   before_action :do_stuff
@@ -214,3 +220,5 @@ A sexy, terse view.
   
   <!-- ... -->
 ```
+
+Now, we've got a beautiful view, separated concerns, and specs that are easy to follow. Let's dance.
