@@ -222,3 +222,5 @@ A sexy, terse view.
 ```
 
 Now, we've got a beautiful view, separated concerns, and specs that are easy to follow. Let's dance.
+
+[The source code in an example Rails app](https://github.com/johnotander/draper_example).
