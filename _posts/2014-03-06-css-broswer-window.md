@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create a pretty browser window mockup in HTML+CSS instead of using an image.
+title: Create a pretty browser window mockup in HTML+CSS.
 summary: This ensures that the content can be changed at will be just changing a tag in the HTML rather than opening up Photoshop.
 category: Design
 ---
