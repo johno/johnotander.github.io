@@ -5,7 +5,7 @@ summary: I think Strong Parameters is the best thing for Rails since sliced brea
 category: Rails
 ---
 
-I'm an advocate of the strong parameters in Rails 4, they're a long-awaited upgrade to the `attr_accessible`/`attr_protected` whitelist/blacklist paradigm that exists in Rails 3 to restrict mass assignment. In Rails, a mass assignment occurs when the `update_attributes` method is called on a model and a `ActiveModel::MassAssignmentSecurity::Error ` error is raised if a protected attribute is attempted to be mass assigned. 
+I'm an advocate of the strong parameters in Rails 4, they're a long-awaited upgrade to the `attr_accessible`/`attr_protected` whitelist/blacklist paradigm that exists in Rails 3 to restrict mass assignment. In Rails, a mass assignment occurs when the `update_attributes` method is called on a model and an `ActiveModel::MassAssignmentSecurity::Error ` error is raised if a protected attribute is attempted to be mass assigned. 
 
 ### In the model? That doesn't sound MVC.
 
@@ -66,7 +66,7 @@ That's it right? Unfortunately not. Without adding `attr_protected :token`, we'v
 
 This can become quite problematic because exposure to authorization sensitive attributes in models, like roles/tokens/etc. can easily provide an attack vector.
 
-Not to mention the fact that the [Github exploit](https://github.com/blog/1068-public-key-security-vulnerability-and-mitigation) _may_ have been avoided if this were a controller-level application of trust.
+Not to mention the fact that the [Github vulnerability](https://github.com/blog/1068-public-key-security-vulnerability-and-mitigation) _may_ have been avoided if this were a controller-level application of trust.
 
 ### Whitelisting attributes in the model lacks flexibility
 
