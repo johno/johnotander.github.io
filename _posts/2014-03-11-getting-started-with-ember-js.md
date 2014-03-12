@@ -11,7 +11,7 @@ After going through the [Ember tutorial](http://emberjs.com/guides/), I figured 
 
 ## Get started by generating the Ember app with Yeoman
 
-First, we need to install npm.
+First, we need to install npm since Yeoman is an node package.
 
 ### Installing npm
 
