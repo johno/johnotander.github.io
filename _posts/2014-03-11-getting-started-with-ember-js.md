@@ -9,7 +9,7 @@ I was intrigued by the notion of this client-side framework trend, and felt like
 
 After going through the [Ember tutorial](http://emberjs.com/guides/), I figured I was ready to take on an app with things separate, rather than a huge app.js file. Since I'm lazy and used to Rails scaffolding, that meant it was time to track down a generator. [Yeoman](http://yeoman.io) fit the bill perfectly, and is the go to for the majority of the front end community.
 
-## Get started by generating the Ember app with Yeoman
+## Get started by generating the Ember app with Yeoman.
 
 First, we need to install npm since Yeoman is an node package.
 
