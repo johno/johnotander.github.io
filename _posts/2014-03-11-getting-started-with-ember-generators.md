@@ -75,11 +75,15 @@ The app will be scaffolded out, and then `bower install` is run automatically to
 
 Yeoman also installs Grunt and adds a Gruntfile.js. Grunt is similar to `rake`, a way to automate tasks. 
 
+```bash
 $ grunt test
+```
 
 This will run your test suite, which is currently just stubbed out. We will add to it later.
 
+```bash
 $ grunt serve
+```
 
 This will enable live reload, build the project, open the serve, and open up a browser tab with localhost:9000 in the URL. There are also other tasks included for minifying assets, cleaning assets, watching sass files, etc. We'll get to those in a later post.
 
