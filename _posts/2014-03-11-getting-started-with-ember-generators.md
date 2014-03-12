@@ -1,8 +1,5 @@
 ---
 layout: post
-title: Test
-summary: test
-category: Rails
 ---
 
 I was intrigued by the notion of this client-side framework trend, and felt like Ember might be a good fit. The documentation is great, their website is easy on the eyes, and it seemed to be a _very_ opinionated framework. Coming from a Rails background, it sounded familiar. So, I decided to give it a try.
