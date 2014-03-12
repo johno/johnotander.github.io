@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strong Parameters with Rails 4
-summary: I think Strong Parameters is the best thing for Rails since sliced bread. Here's why.
+summary: I think Strong Parameters are the best thing for Rails since sliced bread. Here's why.
 category: Rails
 ---
 
