@@ -1,5 +1,8 @@
 ---
 layout: post
+title: Getting Started with Ember JS Generators
+summary: A brief introduction to Yeoman, Grunt, and Bower for the Rails developer.
+category: Ember
 ---
 
 I was intrigued by the notion of this client-side framework trend, and felt like Ember might be a good fit. The documentation is great, their website is easy on the eyes, and it seemed to be a _very_ opinionated framework. Coming from a Rails background, it sounded familiar. So, I decided to give it a try.
@@ -94,7 +97,7 @@ ExampleEmberTddApp.ApplicationRoute = Ember.Route.extend({
 
 And a template:
 
-```html+handlebars
+```html
 <div class="col-md-3">
   <div class="well sidebar-nav">
     <strong>Colors</strong>
