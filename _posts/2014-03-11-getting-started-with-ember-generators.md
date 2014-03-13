@@ -131,6 +131,6 @@ This creates and index at `/#/users`, individual user shows at `/#/users/:user_i
 
 ## That's not all, either.
 
-See the [documentation](https://github.com/yeoman/generator-ember) for even more functionality like view and controller generators.
+See the [documentation](https://github.com/yeoman/generator-ember) for even more functionality, including view and controller generators.
 
-Just like that, I'm able to develop a reasonable workflow for a framework that I'm still wrapping my head around. Though generators are invaluable during the learning process to see how the framework is intended to function, illustrating their development paradigm.
+Just like that, I'm able to develop a reasonable workflow for a framework that I'm still wrapping my head around. Though I believe generators are invaluable during the learning process to see how the framework is intended to function, illustrating their development paradigm.
