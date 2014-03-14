@@ -41,7 +41,7 @@ $ npm install -g generator-ember
 
 ### Time to generate an example app
 
-First, create a directory and `cd` into it.
+First, create a directory and `cd` into it. Yeoman will infer the application name from the name of the directory in which you reside, so keep hat in mind when naming your directory.
 
 ```bash
 $ mkdir ember-example-tdd && cd ember-example-tdd
