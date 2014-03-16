@@ -5,7 +5,7 @@ summary: I think Strong Parameters are the best thing for Rails since sliced bre
 category: Rails
 ---
 
-I'm an advocate of the strong parameters in Rails 4, they're a long-awaited upgrade to the `attr_accessible`/`attr_protected` whitelist/blacklist paradigm that exists in Rails 3 to restrict mass assignment. In Rails, a mass assignment occurs when the `update_attributes` method is called on a model and an `ActiveModel::MassAssignmentSecurity::Error ` error is raised if a protected attribute is attempted to be mass assigned. 
+I'm an advocate of strong parameters in Rails 4, they're a long-awaited upgrade to the `attr_accessible`/`attr_protected` whitelist/blacklist paradigm that exists in the prior versions of Rails to restrict mass assignment. In Rails, a mass assignment occurs when the `update_attributes` method is called on a model and an `ActiveModel::MassAssignmentSecurity::Error ` error is raised if a protected attribute is attempted to be mass assigned. 
 
 ### In the model? That doesn't sound MVC.
 
