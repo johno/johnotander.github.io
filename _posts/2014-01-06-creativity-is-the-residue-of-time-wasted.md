@@ -1,7 +1,7 @@
 ---
 layout: post
 title: The Origins of Creative Insight & Why You Need Grit
-summary: A wonderful and interesting talk by Jonah Lehrer at Behance's 99% conference.
+summary: An interesting talk on creativity by Jonah Lehrer at Behance's 99% conference.
 category: Vimeo
 ---
   
