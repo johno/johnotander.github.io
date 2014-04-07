@@ -21,7 +21,7 @@ _Graduated with High Honors_
 
 ## Buzz Words
 
-Ruby, Rails, AJAX, Javascript/Coffescript, jQuery, JSON, CSS, Sass/Scss, iOS, Objective-C, Android, Java, HTML/HAML/Mustache/Handlebars, Git, Rspec, SQL, Postgres, Ember, TDD, Agile development, AWS, ImageMagick, C
+Ruby, Rails, AJAX, Javascript/Coffescript, jQuery, JSON, CSS, Sass/Scss, iOS, Objective-C, Android, Java, HTML/HAML/Mustache/Handlebars, Git, Rspec, SQL, Postgres, Ember, Bower, Gulp, Yeoman, Grunt, TDD, Agile development, AWS, ImageMagick, C
 
 ## Skills
 
@@ -34,7 +34,6 @@ Ruby, Rails, AJAX, Javascript/Coffescript, jQuery, JSON, CSS, Sass/Scss, iOS, Ob
   - Passionate about learning new technology
 
 ## Work Experience
-
 
 #### Uceem Networks, Developer - Boise, ID   
 _Summer 2012 - Present_  
