@@ -88,7 +88,7 @@ Granted, the urls aren't perfect, because they have the `id-` prefix. But I thin
 
 ## Using Urls for Humans
 
-To use Urls For Humans you need to extend the UrlsForHumans module, and call the class method `urls_for_humans`:
+To use Urls For Humans you need to extend the `UrlsForHumans` module, and call the class method `urls_for_humans`:
 
 ```ruby
 class User < ActiveRecord::Base
