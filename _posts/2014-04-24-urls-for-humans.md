@@ -17,7 +17,7 @@ _In most cases, we simply want to add meaning to the ID of the url for end users
 
 ##### 2. Slugs aren't persistent
 
-This aspect is the most frustrating to me. Let's say we want to add a user's name to their profile url, with friendly_id it'd require the following code:
+This aspect is the most frustrating to me. Let's say we want to add a user's name to their profile url, with `friendly_id` it'd require the following code:
 
 _Modifying the model:_
 
@@ -82,7 +82,7 @@ Urls for Humans is a gem that allows you to apply meaningful names to your Rails
 * Persistent urls, because changes in the latter portions of a param won't affect it's lookup.
 * Did I mention it's simple, yet?
 
-This is a different approach to friendly URLs than the friendly_id gem because it doesn't modify the db queries themselves. The urls_for_humans approach essentially allows all urls fitting the form `resource/<id>-<anything else>` to route to `resource/:id` because `to_i` is called on the `id` parameter.
+This is a different approach to friendly URLs than `friendly_id`'s because it doesn't modify the db queries themselves. The `urls_for_humans` approach essentially allows all urls fitting the form `resource/<id>-<anything else>` to route to `resource/:id` because `to_i` is called on the `id` parameter.
 
 Granted, the urls aren't perfect, because they have the `id-` prefix. But I think it's worth the sacrifice for persistent, human-friendly urls.
 
