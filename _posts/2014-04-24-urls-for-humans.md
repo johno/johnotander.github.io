@@ -17,7 +17,7 @@ _In most cases, we simply want to add meaning to the ID of the url for end users
 
 ##### 2. Slugs aren't persistent.
 
-This aspect is the most frustrating to me. Let's say we want to add a user's name to their profile url, with `friendly_id`. It'd require the following code:
+This aspect is the most frustrating to me. Let's say we want to add a user's name to their profile url with `friendly_id`. It'd require the following code:
 
 _Modifying the model:_
 
@@ -57,7 +57,7 @@ class UsersController < ApplicationController
 end
 ```
 
-So, let's assume we have a `User` object with `id=1` and `first_name='bob'`. When we link to their profile, the URI is: `domain.com/users/bob`. This is awesome. When Bob decides to send a link to his friends, the receive that URL. They can already infer a lot from it:
+So, let's assume we have a `User` object with `id=1` and `first_name='bob'`. When we link to their profile, the URI is: `domain.com/users/bob`. This is awesome. When Bob decides to send a link to his friends, the receive that url. They can already infer a lot from it:
 
 * It's at `domain.com`
 * It's a link to a user
