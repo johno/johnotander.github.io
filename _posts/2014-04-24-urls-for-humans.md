@@ -13,9 +13,7 @@ I think it's vital to have meaningful urls in an application. It gives much need
 
 I don't want to mask, patch, or obfuscate the beautiful simplicity of the `@object = Object.find(params[:id])` that we've come to know and love in Rails controllers.
 
-<p class="message spacious-y">
-  In most cases, we simply want to add meaning to the ID of the url for end users. We don't want to reinvent it. 
-</p>
+_In most cases, we simply want to add meaning to the ID of the url for end users. We don't want to reinvent it._
 
 ##### 2. Slugs aren't persistent
 
