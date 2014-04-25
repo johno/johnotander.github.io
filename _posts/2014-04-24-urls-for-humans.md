@@ -77,9 +77,9 @@ There's now a gem for that. It's called, coincidentally, [Urls for Humans](https
 
 Urls for Humans is a gem that allows you to apply meaningful names to your Rails Application's urls by leveraging what happens under the covers with `Model.find(params[:id])`, `to_i`, and `to_param`. This makes it easy to turn `users/1` to `users/1-john-otander`. So long as the url is prefixed with the model's id (which Urls for Humans ensures), the lookup will happen exactly how we intend it to with a few key benefits:
 
-* Simple thanks to ActiveSupport.
+* Simple, thanks to ActiveSupport.
 * Lightweight, weighing in at 20 something lines of added gem code to your Rails app (since ActiveSupport is already a dependency).
-* Persistent urls because changes in the latter portions of a param won't affect it's lookup.
+* Persistent urls, because changes in the latter portions of a param won't affect it's lookup.
 * Did I mention it's simple, yet?
 
 This is a different approach to friendly URLs than the friendly_id gem because it doesn't modify the db queries themselves. The urls_for_humans approach essentially allows all urls fitting the form `resource/<id>-<anything else>` to route to `resource/:id` because `to_i` is called on the `id` parameter.
