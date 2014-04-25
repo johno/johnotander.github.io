@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Urls for Humans
-summary: Apply persistent, meaningful urls to your Ruby on Rails app.
+summary: Apply persistent, meaningful, human friendly urls to your Ruby on Rails app without any extra cruft.
 category: Rails
 ---
 
