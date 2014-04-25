@@ -75,7 +75,7 @@ They now 404. Or, even worse, link to a new user that's assumed the name Bob.
 
 There's now a gem for that. It's called, coincidentally, [Urls for Humans](https://github.com/johnotander/urls_for_humans).
 
-Urls for Humans is a gem that allows you to apply meaningful names to your Rails Application's urls by leveraging what happens under the covers with `Model.find(params[:id])`, `to_i`, and `to_param`. This makes it easy to turn `users/1` to `users/1-john-otander`. So long as the url is prefixed with the model's id (which Urls for Humans ensures), the lookup will happen exactly how we intend it to with a few key benefits:
+Urls for Humans is a gem that allows you to apply meaningful names to your Rails application's urls by leveraging what happens under the covers with `Model.find(params[:id])`, `to_i`, and `to_param`. This makes it easy to turn `users/1` to `users/1-john-otander`. So long as the url is prefixed with the model's id (which Urls for Humans ensures), the lookup will happen exactly how we intend it to with a few key benefits:
 
 * Simple, thanks to ActiveSupport.
 * Lightweight, weighing in at 20 something lines of added gem code to your Rails app (since ActiveSupport is already a dependency).
@@ -88,7 +88,7 @@ Granted, the urls aren't perfect, because they have the `id-` prefix. But I thin
 
 ## Using Urls for Humans
 
-To use Urls For Humans you need to extend the `UrlsForHumans` module, and call the class method `urls_for_humans`:
+To use Urls for Humans you need to extend the `UrlsForHumans` module, and call the class method `urls_for_humans`:
 
 ```ruby
 class User < ActiveRecord::Base
