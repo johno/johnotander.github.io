@@ -5,19 +5,19 @@ summary: Apply persistent, meaningful, human-friendly urls to your Ruby on Rails
 category: Rails
 ---
 
-I think it's vital to have meaningful urls in an application. It gives much needed context to the link, because a database ID doesn't have any significance to the end user. In order to address this, I've been using the gem, [friendly_id](https://github.com/norman/friendly_id). It's worked well. Most of the time.
+I think it's vital to have meaningful urls in an application. It gives much needed context to the link because a database ID doesn't have any significance to the end user. In order to address this, I've been using the gem, [friendly_id](https://github.com/norman/friendly_id). It's worked well. Most of the time.
 
 ### I've noticed a couple deficiencies:
 
-##### 1. It's unnecessarily complex
+##### 1. It's unnecessarily complex.
 
 I don't want to mask, patch, or obfuscate the beautiful simplicity of the `@object = Object.find(params[:id])` that we've come to know and love in Rails controllers.
 
 _In most cases, we simply want to add meaning to the ID of the url for end users. We don't want to reinvent it._
 
-##### 2. Slugs aren't persistent
+##### 2. Slugs aren't persistent.
 
-This aspect is the most frustrating to me. Let's say we want to add a user's name to their profile url, with `friendly_id` it'd require the following code:
+This aspect is the most frustrating to me. Let's say we want to add a user's name to their profile url, with `friendly_id`. It'd require the following code:
 
 _Modifying the model:_
 
