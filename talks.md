@@ -12,6 +12,6 @@ page-title: Sometimes I give talks, reluctantly.
         Decorators on Rails
       </a>
     </h1>
-    I gave a lightening talk, at a #brewby for <a href="http://localmotion.io">Localmotion</a>, on Decorators and the Draper gem. They clean up view logic, and make those templates wonderful to look at.
+    I gave a lightning talk, at a #brewby for <a href="http://localmotion.io">Localmotion</a>, on Decorators and the Draper gem. They clean up view logic, and make those templates wonderful to look at.
   </div>
 </div>
