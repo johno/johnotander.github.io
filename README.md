@@ -1,1 +1,1 @@
-Where <http://www.johnotander.com> lives.
+<http://www.johnotander.com>
