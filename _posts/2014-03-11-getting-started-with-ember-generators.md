@@ -7,7 +7,7 @@ category: Ember
 
 I was intrigued by the notion of this client-side framework trend, and felt like Ember might be a good fit. The documentation is great, their website is easy on the eyes, and it seemed to be a _very_ opinionated framework. Coming from a Rails background, it sounded familiar. So, I decided to give it a try.
 
-After going through the [Ember tutorial](http://emberjs.com/guides/), I figured I was ready to take on an app with things components filed away in their own compartments, rather than a huge app.js file. Since I'm lazy and used to Rails scaffolding, that meant it was time to track down a generator. [Yeoman](http://yeoman.io) fit the bill perfectly, and is the go to for the majority of the front end community. 
+After going through the [Ember tutorial](http://emberjs.com/guides/), I figured I was ready to take on an app with things components filed away in their own compartments, rather than a huge app.js file. Since I'm lazy and used to Rails scaffolding, that meant it was time to track down a generator. [Yeoman](http://yeoman.io) fit the bill perfectly, and is the go-to for the majority of the front end community. 
 
 ## Get started by generating the Ember app with Yeoman.
 
