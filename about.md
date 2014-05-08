@@ -10,7 +10,7 @@ I don't like to limit myself to developing with particular tools, but I'm most e
 
 I'm currently a Computer Science student at Boise State University, and only have a few part-time semesters left. I have a B.A. in Hispanic Studies.
 
-I work at [Uceem](https://uceem.com) and co-founded [Margin](http://margin.io).
+I work at [A10 Networks](https://a10networks.com) and co-founded [Margin](http://margin.io).
 
 I also like skiing... _A lot_.
 
