@@ -160,6 +160,11 @@ numbers.map({
 
 The `in` is a keyword that separates arguments from the return type of the closure's body.
 
+
+##### Something weird I should point out
+
+For whatever reason, closures have an implied return statement. This means that the last line of a closure is automatically returned, even if it isn't explicity declared. However, functions are required to have the return statement declared. This is a bit strange and indubitably quirky. However, its something that I can live with since it's an arguably small wart at this point.
+
 #### Classes and Objects
 
 Classes in Swift are quite terse and simple. Adding properties, with a getter and setter, only requires declaring a variable in the class, using `let` for a constant property and `var` for a mutable data type.
