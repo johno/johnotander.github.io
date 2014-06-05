@@ -170,7 +170,7 @@ For whatever reason, closures have an implied return statement. This means that 
 
 Classes in Swift are quite terse and simple. Adding properties, with a getter and setter, only requires declaring a variable in the class, using `let` for a constant property and `var` for a mutable data type.
 
-The instantiation of a class always calls the `init()` method, if available. This is serves as the constructor. You can add named parameters in order to accept data, optional or not, upon instantiation.
+The instantiation of a class always calls the `init()` method, if available. This serves as the constructor. You can add named parameters in order to accept data, optional or not, upon instantiation.
 
 Look at the following implementation of a `User` class below for an example of Swift's class syntax and structure:
 
