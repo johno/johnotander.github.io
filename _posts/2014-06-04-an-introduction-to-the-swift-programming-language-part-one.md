@@ -68,7 +68,7 @@ let myDouble = 10.0           // Implicit declaration
 let anotherDouble: Double = 1 // Explicit declaration
 ```
 
-Swift is strongly-typed, so a variable cannot be assigned a type that is different than it's initial declaration, otherwise an error will be raised. Additionally, implicit type conversion doesn't occur, so you must convert a variable to the correct type explicitly:
+Swift is weakly-typed, so a variable cannot be assigned a type that is different than it's initial declaration, otherwise an error will be raised. However, you can cast objects. Additionally, implicit type conversion doesn't occur, so you must convert a variable to the correct type explicitly:
 
 ```
 var favoriteNumberDescr = "My favorite number is "
