@@ -48,11 +48,11 @@ let myConstant = "This is an immutable string"
 myConstant = "Can't do this"
 ```
 
-The second line, where `myConstant` is reassigned is where the error is raised. Since the keyword `let` was used, the variable can no longer be reassigned. However, using `var` will create a mutable variable, and all will be fine:
+The second line, where `myConstant` is reassigned, is where the error is raised. Since the keyword `let` was used, the variable can no longer be reassigned. However, using `var` will create a mutable variable, and all will be fine:
 
 ```
-var myVariable = "This is an immutable string"
-myVariable = "Can't do this"
+var myVariable = "This is an mutable string"
+myVariable = "Can do this"
 ```
 
 #### Types
