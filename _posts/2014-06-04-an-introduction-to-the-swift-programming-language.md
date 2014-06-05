@@ -120,8 +120,8 @@ func makeIsOneCheck() -> (Int -> Bool) {
 }
 
 var isOneCheck = makeIsOneCheck()
-isOneCheck(1)
-isOneCheck(7)
+isOneCheck(1) // true
+isOneCheck(7) // false
 ```
 
 Thera are other functions like `map` that take functions as arguments:
