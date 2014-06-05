@@ -97,7 +97,7 @@ let dictionaryTwo = [:]
 
 #### Functions
 
-The keyword `func` is used to declare functions. The "stab", `->` is used to point to a function's return type.
+The keyword `func` is used to declare functions. The "stab", `->`, is used to point to a function's return type.
 
 ```
 func printStr(strToPrint: String) {
@@ -112,6 +112,13 @@ func getHelloStr(helloRecipient: String) -> String {
 Functions can also return other functions:
 
 ```
+func makeIsOneCheck() -> (Int -> Bool) {
+    func isOne(val: Int) -> Bool {
+        return val == 1
+    }
+    return isOne
+}
+
 var isOneCheck = makeIsOneCheck()
 isOneCheck(1)
 isOneCheck(7)
