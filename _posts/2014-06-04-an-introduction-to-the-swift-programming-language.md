@@ -11,15 +11,15 @@ Swift was the result of many years of hard work by Apple. The results are a high
 
 What really sets Swift apart from its predecessor, Objective-C, is its friendly disposition for new developers and the playground support. The development environment introduces a REPL that provides valuable feedback to developers, making debugging significantly simpler than before. 
 
-![repl](https://cloud.githubusercontent.com/assets/1424573/3183148/4517e6b4-ec63-11e3-835e-ac1ac676e76b.png)
-
 Additionally, the syntax is elegantly terse, straying away from the baroque nature of Objective-C that scared many aspiring mobile developers away.
 
 ## Swift in action
 
 In order to get started, open up Xcode 6 and select "Get started with a new playground". 
 
+<br>
 ![playground](https://cloud.githubusercontent.com/assets/1424573/3183147/420fe066-ec63-11e3-8b10-ae2c4a6d094e.png)
+<br>
 
 After specifying a playground name, you will be presented with the following code.
 
@@ -32,6 +32,10 @@ var str = "Hello, playground"
 ```
 
 On the right hand side, you will also see the words "Hello, playground". This is the result of Xcode's REPL for Swift, displaying the value of the variable `str`.
+
+<br>
+![repl](https://cloud.githubusercontent.com/assets/1424573/3183148/4517e6b4-ec63-11e3-835e-ac1ac676e76b.png)
+<br>
 
 #### Immutable and Mutable Variables
 
