@@ -9,11 +9,19 @@ category: Swift
 
 Swift was the result of many years of hard work by Apple. The results are a higher level language with a robust framework infrastructure that incorporates Automatic Reference Counting (ARC) and an elegant, scripting-language feel.
 
-What really sets Swift apart from its predecessor, Objective-C, is its friendly disposition for new developers and the playground support. The development environment introduces a REPL that provides valuable feedback to developers, making debugging significantly simpler than before. Additionally, the syntax is elegantly terse, straying away from the baroque nature of Objective-C that scared many aspiring mobile developers away.
+What really sets Swift apart from its predecessor, Objective-C, is its friendly disposition for new developers and the playground support. The development environment introduces a REPL that provides valuable feedback to developers, making debugging significantly simpler than before. 
+
+![repl](https://cloud.githubusercontent.com/assets/1424573/3183148/4517e6b4-ec63-11e3-835e-ac1ac676e76b.png)
+
+Additionally, the syntax is elegantly terse, straying away from the baroque nature of Objective-C that scared many aspiring mobile developers away.
 
 ## Swift in action
 
-In order to get started, open up Xcode 6 and select "Get started with a new playground". After specifying a playground name, you will be presented with the following code.
+In order to get started, open up Xcode 6 and select "Get started with a new playground". 
+
+![playground](https://cloud.githubusercontent.com/assets/1424573/3183147/420fe066-ec63-11e3-8b10-ae2c4a6d094e.png)
+
+After specifying a playground name, you will be presented with the following code.
 
 ```
 // Playground - noun: a place where people can play
