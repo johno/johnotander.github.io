@@ -242,8 +242,8 @@ a.sidebar-nav-item:focus {
 
 .sidebar-toggle:active,
 #sidebar-checkbox:checked ~ .wrap .sidebar-toggle {
-  color: rgba(0,0,0,.6);;
-  background-color: rgba(0,0,0,.05);;
+  color: rgba(0,0,0,.6);
+  background-color: rgba(0,0,0,.05);
 }
 
 @media (min-width: 30.1rem) {
