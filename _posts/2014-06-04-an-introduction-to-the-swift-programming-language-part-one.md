@@ -1,7 +1,7 @@
 ---
 layout: post
 title: An Introduction to the Swift Programming Language - Part One
-summary: This is the first part of many that chronicle my exploration into Apple's new programming language, Swift.
+summary: This is the first part of many that chronicles my exploration into Apple's new programming language, Swift.
 category: Swift
 ---
 
