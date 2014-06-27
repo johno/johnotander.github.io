@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Decorators on Rails
-summary: After giving a lightening talk on Decorators on Rails, I figured the slides needed an accompanying blog post.
+summary: After giving a lightning talk on Decorators on Rails, I figured the slides needed an accompanying blog post.
 category: Rails
 ---
 
-This is the blog post for an equivalently titled lightening talk I gave for a [localmotion #brewby](http://localmotion.io).  The slides can be found [here](http://johnotander.com/decorators_on_rails).
+This is the blog post for an equivalently titled lightning talk I gave for a [localmotion #brewby](http://localmotion.io).  The slides can be found [here](http://johnotander.com/decorators_on_rails).
 
 Decorators can be useful for cleaning up view logic and models in a Rails application. The [Draper gem](https://github.com/drapgergem/draper) makes it essentially seamless to integrate, resulting in a more maintainable codebase that's easier to ensure full test coverage and happy developers. 
 
