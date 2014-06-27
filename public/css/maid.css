@@ -1,12 +1,4 @@
 /*
- *  MAID
- *
- * Designed, built, and released under MIT license by @4lpine. Learn more at
- * https://github.com/johnotander/maid.
- */
-
-
-/*
  * Contents
  *
  * Global resets
@@ -35,6 +27,7 @@ body {
 body { height: 100%; }
 
 html {
+  font-size: 24px;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
 }
 
@@ -196,6 +189,7 @@ a.sidebar-nav-item:focus {
   text-decoration: none;
   background-color: rgba(0,0,0,.05);
   border-color: transparent;
+  opacity: 1;
 }
 
 @media (min-width: 48rem) {
