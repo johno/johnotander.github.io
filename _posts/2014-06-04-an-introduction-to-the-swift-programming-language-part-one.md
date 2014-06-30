@@ -7,7 +7,7 @@ category: Swift
 
 ## Introduction
 
-Swift was the result of many years of hard work by Apple. The results are a higher level language with a robust framework infrastructure that incorporates Automatic Reference Counting (ARC) and an elegant, scripting-language feel.
+Swift was the result of many years of hard work by Apple. The results are a high-level language with a robust framework infrastructure that incorporates Automatic Reference Counting (ARC) and an elegant, scripting language-like feel.
 
 What really sets Swift apart from its predecessor, Objective-C, is its friendly disposition for new developers and the playground support. The development environment introduces a REPL that provides valuable feedback to developers, making debugging significantly simpler than before. 
 
