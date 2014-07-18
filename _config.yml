@@ -12,10 +12,10 @@ description:      'I build things by banging on a keyboard.'
 baseurl:          http://johnotander.com/
 
 author: 'John Otander'
-email:          'johnotander@gmail.com'
+email:  'johnotander@gmail.com'
 
-twitter:        '4lpine'
-github:         'johnotander'
+twitter:        4lpine
+github:         johnotander
 
 paginate:         4
 
