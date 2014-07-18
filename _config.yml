@@ -14,9 +14,6 @@ baseurl:          http://johnotander.com/
 author: 'John Otander'
 email:  'johnotander@gmail.com'
 
-twitter:        4lpine
-github:         johnotander
-
 paginate:         4
 
 github:
