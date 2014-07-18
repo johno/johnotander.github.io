@@ -14,6 +14,10 @@
   height: 800px;
 }
 
+.browser-box {
+  font-family: "Helvetica", sans-serif;
+}
+
 .browser-box h1 {
   color: #fff;
   font-size: 70px;
@@ -48,7 +52,7 @@
 }
 
 .browser-window .circles {
-  margin: -4px 11px;
+  margin: -2px 11px;
 }
 
 .browser-window .content {
@@ -68,7 +72,7 @@
 }
 
 .browser-window .dev-tools .bar {
-  margin-top: -8px;
+  margin-top: -4px;
   border-top: thin solid #e7e7e6;
   border-bottom: thin solid #e7e7e6;
   color: #e7e7e6;

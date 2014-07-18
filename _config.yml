@@ -11,17 +11,13 @@ tagline:          Ramblings
 description:      'I build things by banging on a keyboard.'
 url:              http://johnotander.com
 
-author:
-  name:           'John Otander'
-  url:            https://twitter.com/4lpine
-  email:          'johnotander@icloud.com'
-  twitter:        '4lpine'
-  github:         'johnotander'
+author: 'John Otander'
+email:          'johnotander@gmail.com'
+
+twitter:        '4lpine'
+github:         'johnotander'
 
 paginate:         4
-
-# Custom vars
-version:          1.0.0
 
 github:
   repo:           https://github.com/johnotander/johnotander.github.io
