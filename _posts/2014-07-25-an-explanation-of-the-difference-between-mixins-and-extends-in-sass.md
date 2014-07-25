@@ -7,7 +7,7 @@ category: Design
 
 [Sass](http://sass-lang.com/) is a powerful front-end tool. CSS has considerable syntactic limitations when it comes to employing the DRY Principle, so the Sass Preprocessor was developed to address that wart. However, when leveraged incorrectly, Sass can generate some terrible, inefficient, and bloated CSS. Though this isn't a shortcoming in Sass, it's an implementation issue. As The Sass Way [stated](http://thesassway.com/editorial/sass-doesnt-create-bad-code-bad-coders-do): "Sass doesn't create bad code. Bad coders do."
 
-## Where does the bad code come from?
+### Where does the bad code come from?
 
 In most cases, the bad code that's generated is the result of the Sass `@mixin` being used incorrectly. Mixins are intended to group CSS declarations that will be reused, or `@include`d. When a mixin is included within the block of a selector, the CSS declarations are copied over during compilation. This can create redundant declarations when leveraged incorrectly:
 
@@ -71,7 +71,7 @@ Which results in the following, less bloated, CSS:
 }
 ```
 
-## Using extend to avoid duplicated declarations
+### Using extend to avoid duplicated declarations
 
 When a class is extended, it will be added to the selector list of the block that is being extended.
 
@@ -101,7 +101,7 @@ Which results in:
 
 This is advantageous for a few reasons. Firstly, the declaration of `color: blue;` is made only one time. Secondly, this results in readable CSS that doesn't feel "compiled". Lastly, changing the blue from `#7BC3E9` to `#46B1EB` only requires a single line to be changed.
 
-## Further reading:
+## Further reading
 
 * <https://coderwall.com/p/7p7w2a>
 * <http://css-tricks.com/the-extend-concept/>
