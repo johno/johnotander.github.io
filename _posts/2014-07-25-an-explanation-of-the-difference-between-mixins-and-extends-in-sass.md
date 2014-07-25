@@ -1,3 +1,4 @@
+---
 layout: post
 title: An Explanation of the Difference Between Mixins and Extends in Sass
 summary: Failure to use Sass mixins and extends correctly can result in bloated, inefficient CSS. So, I decided to dive into the differences, and illustrate the correct uses.
