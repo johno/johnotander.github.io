@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         redcarpet
-pygments:         true
+highlighter:      pygments
 
 # Permalinks
 permalink:        pretty
@@ -9,7 +9,7 @@ permalink:        pretty
 title:            John Otander
 tagline:          Ramblings
 description:      'I build things by banging on a keyboard.'
-baseurl:          http://johnotander.com/
+baseurl:          /
 
 author: 'John Otander'
 email:  'johnotander@gmail.com'
