@@ -1,6 +1,7 @@
 ---
 layout: page
 title: I build things by banging on a keyboard.
+in_nav: true
 ---
 
 <div class="half-width">

@@ -1,3 +1,8 @@
-<!--<a href="{{ site.baseurl }}posts">Blog</a>-->
-<a href="/about/">About</a>
-<a href="/contact">Contact</a>
+{% assign pages_list = site.pages %}
+{% for node in pages_list %}
+  {% if node.in_nav %}
+    {% if node.layout == "page" %}
+      <a class="{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.title }}</a>
+    {% endif %}
+  {% endif %}
+{% endfor %}
