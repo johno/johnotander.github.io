@@ -2,7 +2,7 @@
 {% for node in pages_list %}
   {% if node.in_nav %}
     {% if node.layout == "page" %}
-      <a class="{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">{{ node.link_text }}</a>
+      <a class="{% if page.url == node.url %}active{% endif %}" href="{{ node.url }}">{{ node.link_text }}</a>
     {% endif %}
   {% endif %}
 {% endfor %}
