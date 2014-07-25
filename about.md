@@ -1,5 +1,6 @@
 ---
 layout: page
+link_text: About
 title: I build things by banging on a keyboard.
 in_nav: true
 ---
