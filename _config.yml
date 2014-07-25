@@ -9,7 +9,7 @@ permalink:        pretty
 title:            John Otander
 tagline:          Ramblings
 description:      'I build things by banging on a keyboard.'
-baseurl:          ""
+baseurl:          /
 
 author: 'John Otander'
 email:  'johnotander@gmail.com'
