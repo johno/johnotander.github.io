@@ -17,4 +17,4 @@ I'm currently a Computer Science student at Boise State University, and only hav
 
 <p class="mid-gray italic py1">I also like skiing and soccer... A lot.</p>
 
-If you'd like to get in touch, you can contact me [here]({{ site.baseurl }}/contact).
+If you'd like to get in touch, you can contact me [here](/contact).
