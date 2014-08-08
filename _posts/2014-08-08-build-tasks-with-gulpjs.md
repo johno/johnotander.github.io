@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Build Tasks with Gulp.js
-summary: Gulp.js is an easy to use, streaming build system. Their API is lean, simple, and a delight to see. In this post I've outlined how Gulp works and how I use it in my everyday workflow.
+summary: Gulp.js is a streaming build system. Their API is lean, simple, and a delight to use. In this post I've outlined how Gulp works and how I use it in my everyday workflow.
 category: Front End Development
 ---
 
