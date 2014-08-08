@@ -228,7 +228,7 @@ This task grabs all the `.js` files in the `src/js` directory, jslints them, con
 
 Lastly, we just need to add the 'js' task to the default task list. We are left with a `gulpfile.js` that's ready to go:
 
-```javscript
+```javascript
 var gulp    = require('gulp');
 var sass    = require('gulp-sass');
 var concat  = require('gulp-concat');
@@ -260,3 +260,10 @@ gulp.task('default', ['scss', 'js']);
 ```
 
 The source code for this example is available on Github: <https://github.com/johnotander/gulpfile-example>.
+
+## Further Reading:
+
+* <http://travismaynard.com/writing/getting-started-with-gulp>
+* <https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md#getting-started>
+* <http://www.sitepoint.com/introduction-gulp-js/>
+* <https://www.codefellows.org/blog/quick-intro-to-gulp-js>
