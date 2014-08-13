@@ -18,3 +18,5 @@ paginate:         4
 
 github:
   repo:           https://github.com/johnotander/johnotander.github.io
+
+exclude: ['node_modules', 'package.json', 'gulpfile.js', 'scss']

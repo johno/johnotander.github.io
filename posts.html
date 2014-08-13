@@ -1,18 +1,17 @@
 ---
 layout: default
+in_nav: true
+link_text: Writing.
 ---
 
-<div class="home">
-
-  <div class="posts">
-    {% for post in site.posts %}
-      <div class="post">
-        <a href="{{ post.url }}" class="post-link">
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> <br><br>
-          <h3 class="h2 post-title">{{ post.title }}</h3>
-          <p class="post-summary">{{ post.summary }}</p>
-        </a>
-      </div>
-    {% endfor %}
-  </div>
+<div class="posts py2">
+  {% for post in site.posts %}
+    <div class="post">
+      <a href="{{ post.url }}" class="post-link">
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> <br><br>
+        <h3 class="h2 post-title">{{ post.title }}</h3>
+        <p class="post-summary">{{ post.summary }}</p>
+      </a>
+    </div>
+  {% endfor %}
 </div>
