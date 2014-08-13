@@ -6,10 +6,10 @@ body {
 }
 
 a {
-  color: $blue;
+  color: $primary;
   text-decoration: none;
   &:hover {
-    color: darken($blue, 10%);
+    color: darken($primary, 10%);
     text-decoration: underline;
   }
 }

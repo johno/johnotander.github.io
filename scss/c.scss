@@ -1,6 +1,29 @@
+@import "variables";
+
 @import "icon-font";
 @import "solarized-dark";
 @import "sticky-footer";
+
+$primary: #16a085;
+
+.measure {
+  max-width: 48rem;
+}
+
+.wrap .measure {
+  margin: 0 auto;
+}
+
+.site-header a {
+  color: lighten($dark-gray, 15%);
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $dark-gray;
+    text-decoration: none;
+  }
+}
 
 /*
 
@@ -12,9 +35,6 @@
   MIT License http://opensource.org/licenses/MIT
 
 */
-
-
-@import "variables";
 
 @import "reset";
 
