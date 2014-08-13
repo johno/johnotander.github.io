@@ -20,12 +20,12 @@ h6, .h6, small { font-size: $h6; }
 // Responsive Type Scale
 @if ($responsive-type) {
   @media screen and (min-width: $breakpoint-desktop) {
-    .h1 { font-size: $desktop-h1; }
-    .h2 { font-size: $desktop-h2; }
-    .h3 { font-size: $desktop-h3; }
-    .h4 { font-size: $desktop-h4; }
-    .h5 { font-size: $desktop-h5; }
-    .h6 { font-size: $desktop-h6; }
+    .h1, h1 { font-size: $desktop-h1; }
+    .h2, h2 { font-size: $desktop-h2; }
+    .h3, h3 { font-size: $desktop-h3; }
+    .h4, h4 { font-size: $desktop-h4; }
+    .h5, h5 { font-size: $desktop-h5; }
+    .h6, h6 { font-size: $desktop-h6; }
   }
 }
 

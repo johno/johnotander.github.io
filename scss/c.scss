@@ -15,12 +15,13 @@ $primary: #16a085;
 }
 
 .site-header a {
-  color: lighten($dark-gray, 15%);
+  font-weight: 200;
+  color: lighten($lightish-gray, 15%);
 
   &:hover,
   &:focus,
   &:active {
-    color: $dark-gray;
+    color: $lightish-gray;
     text-decoration: none;
   }
 }
