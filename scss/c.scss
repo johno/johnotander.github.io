@@ -15,15 +15,24 @@ $primary: #16a085;
 }
 
 .site-header a {
+  font-size: .9rem;
   font-weight: 200;
-  color: lighten($lightish-gray, 15%);
+  color: $lightish-gray;
 
   &:hover,
   &:focus,
   &:active {
-    color: $lightish-gray;
+    color: darken($lightish-gray, 10%);
     text-decoration: none;
   }
+}
+
+.lightish-gray {
+  color: $lightish-gray;
+}
+
+.muted {
+  opacity: .7;
 }
 
 /*
