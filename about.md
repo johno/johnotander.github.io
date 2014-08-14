@@ -1,11 +1,11 @@
 ---
 layout: page
 link_text: About.
-title: I build things by banging on a keyboard.
+title: Hello, my name is John Otander.
 in_nav: true
 ---
 
-<div class="half-width">
+<div class="half-width mb4">
   <img src="/public/images/me.jpeg" class="half-width mt3 mb2" />
 </div>
 

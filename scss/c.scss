@@ -3,6 +3,7 @@
 @import "icon-font";
 @import "solarized-dark";
 @import "sticky-footer";
+@import "posts";
 
 $primary: #16a085;
 
@@ -14,9 +15,11 @@ $primary: #16a085;
   margin: 0 auto;
 }
 
-.site-header a {
-  font-size: .9rem;
+.thin {
   font-weight: 200;
+}
+
+.site-header a {
   color: $lightish-gray;
 
   &:hover,
@@ -33,6 +36,14 @@ $primary: #16a085;
 
 .muted {
   opacity: .7;
+}
+
+.small {
+  font-size: .8rem;
+}
+
+.form textarea.input {
+  height: auto;
 }
 
 /*

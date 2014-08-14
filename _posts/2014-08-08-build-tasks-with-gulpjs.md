@@ -2,7 +2,7 @@
 layout: post
 title: Build Tasks with Gulp.js
 summary: Gulp.js is a streaming build system. Their API is lean, simple, and a delight to use. In this post I've outlined how Gulp works and how I use it in my everyday workflow.
-category: Front End Development
+category: Front-End-Development
 ---
 
 After some experimentation with both Gulp and Grunt, I've found the former to be preferable. After all, Gulp was able to learn from Grunt's mistakes, and in doing so they made changes to the API to make it more user friendly. Paraphrased from [gulpjs.com](http://gulpjs.com): Their strict plugin guidelines ensure that [plugins](http://gulpjs.com/plugins/) are simple and only serve one particular task. The API surface is also small, making it easier to learn. Not to mention that the concept of "streams" and "piping" is much more intuitive and easy to picture as you construct your tasks that may have multiple steps involved. The best part of all, the use of streams avoids disk writes until the task is complete.

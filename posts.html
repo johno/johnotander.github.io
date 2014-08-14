@@ -8,8 +8,8 @@ link_text: Writing.
   {% for post in site.posts %}
     <div class="post">
       <a href="{{ post.url }}" class="post-link">
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> <br><br>
         <h3 class="h2 post-title">{{ post.title }}</h3>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         <p class="post-summary">{{ post.summary }}</p>
       </a>
     </div>
