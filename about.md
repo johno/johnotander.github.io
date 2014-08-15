@@ -5,7 +5,7 @@ title: Hello, my name is John Otander.
 in_nav: true
 ---
 
-<div class="half-width mb4">
+<div class="half-width mb3">
   <img src="/public/images/me.jpeg" class="half-width mt3 mb2" />
 </div>
 

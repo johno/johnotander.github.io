@@ -30,3 +30,13 @@
   &:focus {}
 }
 
+.button-primary {
+  color: #fff;
+  background-color: $primary;
+  &:hover,
+  &:focus,
+  &:active {
+    color: #fff;
+    background-color: darken($primary, 15%);
+  }
+}

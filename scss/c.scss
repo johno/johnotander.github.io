@@ -4,8 +4,15 @@
 @import "solarized-dark";
 @import "sticky-footer";
 @import "posts";
+@import "browser";
 
 $primary: #16a085;
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+ }
 
 .measure {
   max-width: 48rem;
@@ -35,7 +42,7 @@ $primary: #16a085;
 }
 
 .muted {
-  opacity: .7;
+  opacity: .65;
 }
 
 .small {
