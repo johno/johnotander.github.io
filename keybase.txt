@@ -1,1 +1,82 @@
-Hi
+==================================================================
+https://keybase.io/johno
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://johnotander.com
+  * I am johno (https://keybase.io/johno) on keybase.
+  * I have a public key with fingerprint 55BF F709 0CB5 73D7 4EC8  4257 9514 B12F F542 F648
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "client": {
+            "name": "keybase.io node.js client",
+            "version": "0.4.16"
+        },
+        "key": {
+            "fingerprint": "55bff7090cb573d74ec842579514b12ff542f648",
+            "host": "keybase.io",
+            "key_id": "9514B12FF542F648",
+            "uid": "43c506c4761b09ed127229396b5e0400",
+            "username": "johno"
+        },
+        "merkle_root": {
+            "ctime": 1408079240,
+            "hash": "98ea7a8fabba58c583e23f22545c9eaf730932d78d009571e916ba337676f757557e87114a1992440f8e01e2bd28fc36c348f7233b719c65d105e224174c8fe5",
+            "seqno": 38488
+        },
+        "service": {
+            "hostname": "johnotander.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1408079320,
+    "expire_in": 157680000,
+    "prev": "aac2c8a80978b6993d4808c2928e3c234398553c9ca1f8b274c6b729cb8e5672",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owFVkntQFVUcxy+IJKRhY4OWkXgZcgjmunvOnj1niV4qj7AphYyYkDv7OAvLYxf3
+XigEzEEGBx1AcXDKARWdYtCrZlrQCAYx6uRrYjS1HAktZchQ4+Wkou0azeD5a8/+
+Puf7+35/52yaMcXh71f/3MGFo4vGkvxODUiO1MH6SyVOyVCKnbElTjlPo7rX/tLF
+fOqMdebSYkn0UJdmhOuGQl05nvAJJsZZRE2PZugWxbg4F8s7y2Js3j6tanoWNQtM
+zRZzIiSpKmYERpYQhgrmqEw4gLCAWE5igaoiDqg8RyzNbMPjfaKt87GmW1Osvza/
+iAUJCRaf8B9f+LjAQRkxvMxhnpUYgSoswAAIUOAlRBmOYWzQQ82JTDlGtm7YZvOp
+mZtH3aZhPI4sezW7znIMYbAAOMayI3qy7caEilgkqihJIiIyIpACqAKAOCQLVFQx
+ZAQIFEwUhhEQZqnA8pIIIeYxr2KEEcKUYJblRFawhDlGJZRhKZAUQFQZ8jLkiIoB
+hBJmBZlHCssgCgDHYk4mKkWWfw9dZZmOhYQjpMzemkWaTG3b9sgmJ/OKukJNl2zk
+W8cKTMNryEaeVcz2egti7dje4gIb/phK7n0TOm5J0xXrzibfKmuhT44EAmsk9JMC
+zaRuzSYQ5gljLbsPLbI0RVEGMhEJI2Ai8YIAFY4wRAYCIBTKAHJQIAhBWZBFViUS
+sPLxEgaCLBGKeAwmBbV8ilmWpEfL0kVvoUmdZVX+LwY4/PwdgVP97WfrCA6a+f9b
+bm4IeeRtuNMQmJDmTkpqbl3Q80LKT2JV5oH4f9SYw223Cxcd7T3m231vcWO/Z1Nl
+wGu+l7Sa4FuNORfvzn+4IvRvffZwVHFY6TeRPbP2hWzsStnT+Gp89w8ZHZvbqqJ6
++7777Y+M4tLaX3ETE7g4Wr+/FGmz9/TF9B8fuRZWtLtq5MjM1B4l9JyrImJO7XBi
+U01XXfXZ8uENK9a3fb4RRoR2Vrb2rIlqbg14f+OSVf2RZ9rXrc9e+eDuBnhitGja
+1ejYnXfG1mZd2F+3GW3bfr+5MX9Kn/pXRnrr2YuHz7tCIvqDi8oa03PHby1PKnzq
+T5YOMfr4xQXVuYfKgx+1T122ZXheV2XumV2O8dKXL3Vd7h17OP9onvrVlaXG9MoP
+x/dlOfbPSHq9Ynty+8D3g9EVcb/A37t7ooKuG+eHmpiWt59dpr6Vfjz35M0rT+fE
+z9rbcaIwTX3EtSQe0NN2xRWUVV6Z3j6mvtEbfu72R/s75Rulq1dG120pUVO7f/4g
+Mtz3AFWXnLoe8cq5gctr66vRtxfYmDxP7c3Oa/du/Hjw67qHTf1HhqaRGikloHz1
+At+Nm33Lw7y1a26Zws4dc4MCtprPw8zTWe+G+fbOiD65zZuMgtbRxNCoNx3zPmtP
+6n7ni4H6upGFQuqOQ8dOj16NW5L+afJ7HV8Gnprjq9w5vS9xcKil1nd38Jm9aG6t
+OwL2Lsn8Fw==
+=oiIa
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/johno
+
+==================================================================
