@@ -15,6 +15,6 @@ I don't like to limit myself to developing with particular tools, but I'm most e
 
 I'm currently a Computer Science student at Boise State University, and only have a few part-time semesters left. I have a B.A. in Hispanic Studies. I work at [A10 Networks](https://a10networks.com) and co-founded [Margin](http://margin.io).
 
-<p class="mid-gray italic py1">I also like skiing and soccer... A lot.</p>
+<p class="mid-gray italic p4 mt4 mb4 center bg-lightest">I also like skiing and soccer... A lot.</p>
 
 If you'd like to get in touch, you can contact me [here](/contact).

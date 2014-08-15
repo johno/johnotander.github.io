@@ -1,5 +1,11 @@
 // Grid
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 .container {
   max-width: $grid-max-width;
   margin-right: auto;
@@ -10,6 +16,10 @@
   overflow: hidden;
   margin-right: -$grid-gutter/2;
   margin-left: -$grid-gutter/2;
+}
+
+.measure {
+  @extend .px1;
 }
 
 .col,
@@ -30,6 +40,9 @@
 
 // Desktop grid
 @media screen and (min-width: $breakpoint-desktop) {
+  .measure {
+    @extend .px0;
+  }
   .col { float: left; }
   .col-right { float: right; }
   .col-center { margin-right: auto; margin-left: auto; }

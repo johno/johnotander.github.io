@@ -37,6 +37,21 @@ $primary: #16a085;
   }
 }
 
+.project a {
+  @extend .muted;
+  color: $dark-gray;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
+}
+
+.project {
+  @extend .py2;
+}
+
 .lightish-gray {
   color: $lightish-gray;
 }

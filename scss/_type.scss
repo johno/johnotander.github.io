@@ -50,3 +50,17 @@ h6, .h6, small { font-size: $h6; }
 .right-align  { text-align: right; }
 .justified    { text-align: justify; }
 
+pre {
+  padding: 1rem;
+  @extend .mt2;
+  margin-bottom: 1rem;
+}
+
+pre, code {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  overflow-x: scroll;
+}
+
+p, li {
+  word-wrap: break-word;
+}
