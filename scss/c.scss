@@ -37,7 +37,8 @@ $primary: #16a085;
   }
 }
 
-.project a {
+.project a,
+a.dark-gray {
   @extend .muted;
   color: $dark-gray;
 
