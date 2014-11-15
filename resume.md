@@ -1,14 +1,10 @@
----
-layout: page
-title: Resume
-page-title: My professional self.
----
-
 ## John Otander
 Boise, Idaho   
 [johnotander@gmail.com](mailto:johnotander@gmail.com) | [johnotander.com](http://www.johnotander.com) | [github.com/johnotander](https://github.com/johnotander)
 
-Software craftsman with experience in all facets of web application development. Significant expertise in web/mobile design and user experience by creating aesthetically pleasing user interfaces and intuitive interactions. Skilled at developing modern, RESTful applications with data analytics, 3rd-party API integration, and efficient database queries.
+I'm a software craftsman with experience in all facets of web application development. Significant expertise in web/mobile design and user experience by creating aesthetically pleasing user interfaces and intuitive interactions. Skilled at developing modern, RESTful applications with data analytics, 3rd-party API integration, and efficient database queries.
+
+My primary emphasis is the front end, where I write performant, reusable CSS/Javascript and design interfaces that are easy, and a delight, to use. I'm passionate about automation, and invest time in automating tasks with Gulp, Yeoman, and other tools.
 
 ## Education
 Boise State University, Boise ID: Bachelor of Science, expected May 2015   
@@ -26,6 +22,7 @@ Ruby, Rails, AJAX, Javascript/Coffescript, jQuery, JSON, CSS, Sass/Scss, iOS, Ob
 ## Skills
 
   - Full stack Ruby on Rails development
+  - Efficient, simple, and beautiful CSS/HTML
   - Ability to perform under pressure
   - Well versed in Software Development best practices
   - Astute attention to detail
@@ -35,8 +32,15 @@ Ruby, Rails, AJAX, Javascript/Coffescript, jQuery, JSON, CSS, Sass/Scss, iOS, Ob
 
 ## Work Experience
 
+#### A10 Networks, Software Engineer - Boise, ID
+_March 2014 - Present_
+ 
+Responsible for developing and designing cloud configuration infrastructure for network appliances, including web apps, API design, and asset optimization. Tasked with developing an internal front end framework (Bootstrap wrapper) for all web products. Primary technologies: Ruby on Rails, CSS, SCSS, HTML, and Javascript.
+
+
 #### Uceem Networks, Developer - Boise, ID   
-_Summer 2012 - Present_  
+_Summer 2012 - March 2014_
+
 Responsible for developing and designing a cloud-based dashboard for network configuration and usage analytics. Leading the design of all aspects of the web application and homepage, while being an integral component of the development of the entire stack.
 
 Duties and Responsibilities   
