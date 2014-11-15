@@ -1,3 +1,10 @@
+---
+layout: page
+link_text: Resume.
+title:
+in_nav: false
+---
+
 ## John Otander
 Boise, Idaho   
 [johnotander@gmail.com](mailto:johnotander@gmail.com) | [johnotander.com](http://www.johnotander.com) | [github.com/johnotander](https://github.com/johnotander)
