@@ -45,7 +45,7 @@ Responsible for developing and designing a cloud-based dashboard for network con
 
 Duties and Responsibilities   
 
-  - Leading the design of a beautiful dashboard and user interface
+  - Leading the design and implementation of a beautiful dashboard and user interface
   - Full stack Ruby on Rails development, from server configuration to button placement
   - Payment and billing integration, ensuring PCI compliance
   - Developing a RESTy API for internal resources and end users
