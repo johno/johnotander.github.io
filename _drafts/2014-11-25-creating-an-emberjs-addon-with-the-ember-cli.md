@@ -293,8 +293,7 @@ And, if we run the tests again, everything passes!
 ## Creating the initializer
 
 ```
-mkdir app/initializers
-touch app/initializers/ember-remarkable.js
+ember g initializer ember-remarkable
 ```
 
 Here, we can import the addon helper and register it as a Handlebars helper:
@@ -312,3 +311,5 @@ export default {
   initialize: initialize
 };
 ```
+
+This will register the helper, but allow the app to override the addon if they so choose.
