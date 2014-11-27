@@ -148,7 +148,7 @@ module.exports = {
 
   included: function(app) {
     this._super.included(app);
-    this.app.import(app.bowerDirectory + 'remarkable/remarkable.js');
+    this.app.import(app.bowerDirectory + '/remarkable/dist/remarkable.js');
   }
 };
 ```
@@ -164,4 +164,48 @@ ember g helper md-remarkable
 ```
 
 This will create the helper, with a test file. However, the helper is created in `app/helpers`, which
-isn't where we want the helper to be located. We want to keep the helper in the add
+isn't where we want the helper to be located. We want to keep the helper in the `addon/helpers` directory.
+This ensures that the helper doesn't stomp on anything defined by the user.
+
+So, we will have to move the `helpers` directory with `mv app/helpers addon`.
+
+### Testing the helper
+
+```javascript
+import {
+  mdRemarkable
+} from 'ember-remarkable/helpers/md-remarkable';
+
+module('MdRemarkableHelper');
+
+test('it correctly converts markdown to html', function() {
+  var result = mdRemarkable('# This should be a h1');
+  equal(result.toString().trim(), '<h1>This should be a h1</h1>');
+});
+```
+
+You can verify that the test is failing with `ember t`.
+
+### Implementing the helper
+
+```javascript
+import Ember from 'ember';
+
+export function mdRemarkable(markdownInput) {
+  var md = new Remarkable();
+  return new Ember.Handlebars.SafeString(md.render(markdownInput));
+}
+
+export default Ember.Handlebars.makeBoundHelper(mdRemarkable);
+```
+
+Now, you can run the tests with `ember t` and see that the test is passing, however, the linting tests
+are now failing because we are implicitly calling the `Remarkable` constructor, and jshint doesn't now
+that it is accessible globally.
+
+The easy fix is to modify the `.jshintrc` to make it not complain, however, we can also create a shim
+to mimic ES6 functionality.
+
+#### Creating a shim
+
+
