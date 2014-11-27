@@ -203,9 +203,112 @@ Now, you can run the tests with `ember t` and see that the test is passing, howe
 are now failing because we are implicitly calling the `Remarkable` constructor, and jshint doesn't now
 that it is accessible globally.
 
+```
+not ok 4 PhantomJS 1.9 - JSHint - ember-export-application-global/helpers: ember-export-application-global/helpers/md-remarkable.js should pass jshint
+    ---
+        actual: >
+            null
+        message: >
+            ember-export-application-global/helpers/md-remarkable.js should pass jshint.
+            ember-export-application-global/helpers/md-remarkable.js: line 5, col 16, 'Remarkable' is not defined.
+
+            1 error
+        Log: >
+    ...
+```
+
 The easy fix is to modify the `.jshintrc` to make it not complain, however, we can also create a shim
 to mimic ES6 functionality.
 
 #### Creating a shim
 
+First, we need to create a vendor file since that will be automatically merged into the app:
 
+```
+mkdir vendor/ember-remarkable
+touch vendor/ember-remarkable/shim.js
+```
+
+Now we can create the shim:
+
+```javascript
+/* globals Remarkable */
+
+define('remarkable', [], function() {
+  'use strict';
+
+  return {
+    'default': remarkable
+  };
+});
+```
+
+This defines an ES6 shim so that we can leverage the `import Remarkable from 'remarkable'` ES6
+import syntax. However, we aren't quite done yet because we need to import the shim into the app,
+so you will need to modify your `index.js` to the following:
+
+```javascript
+'use strict';
+
+var path = require('path');
+
+module.exports = {
+  name: 'ember-remarkable',
+
+  blueprintsPath: function() {
+    return path.join(__dirname, 'blueprints');
+  },
+
+  included: function(app) {
+    this._super.included(app);
+    this.app.import(app.bowerDirectory + '/remarkable/dist/remarkable.js');
+    this.app.import('vendor/ember-remarkable/shim.js', {
+      type: 'vendor',
+      exports: { 'remarkable': ['default'] }
+    });
+  }
+};
+```
+
+This still leaves `Remarkable` in the global scope, attached to the `window`, however we get to
+leverage module `import`s, which will allow us to future-proof this implementation and avoid
+modifying the jshinting.
+
+Now, we can import the module in the helper file:
+
+```javascript
+import Ember from 'ember';
+import Remarkable from 'remarkable';
+
+export function mdRemarkable(markdownInput) {
+  var md = new Remarkable();
+  return new Ember.Handlebars.SafeString(md.render(markdownInput));
+}
+
+export default Ember.Handlebars.makeBoundHelper(mdRemarkable);
+```
+
+And, if we run the tests again, everything passes!
+
+## Creating the initializer
+
+```
+mkdir app/initializers
+touch app/initializers/ember-remarkable.js
+```
+
+Here, we can import the addon helper and register it as a Handlebars helper:
+
+```javascript
+import Ember from 'ember';
+import { mdRemarkable } from 'ember-remarkable/helpers/md-remarkable';
+
+export function initialize(/* container, application */) {
+  Ember.Handlebars.helper('md-remarkable', mdRemarkable);
+};
+
+export default {
+  name: 'ember-remarkable',
+  initialize: initialize
+};
+```
