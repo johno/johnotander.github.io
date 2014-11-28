@@ -238,7 +238,7 @@ define('remarkable', [], function() {
   'use strict';
 
   return {
-    'default': remarkable
+    'default': Remarkable
   };
 });
 ```
@@ -303,7 +303,7 @@ import Ember from 'ember';
 import { mdRemarkable } from 'ember-remarkable/helpers/md-remarkable';
 
 export function initialize(/* container, application */) {
-  Ember.Handlebars.helper('md-remarkable', mdRemarkable);
+  Ember.Handlebars.helper('md', mdRemarkable);
 };
 
 export default {
@@ -313,3 +313,78 @@ export default {
 ```
 
 This will register the helper, but allow the app to override the addon if they so choose.
+
+## Implementing a component
+
+`app/components/md-text.js`
+```javascript
+import Ember from 'ember';
+import Remarkable from 'remarkable';
+
+export default Ember.Component.extend({
+  text: '',
+  typographer: false,
+  linkify: false,
+
+  parsedMarkdown: function() {
+    var md = new Remarkable(this.get('buildOptions'));
+    var html = md.render(this.get('text'));
+
+    return new Ember.Handlebars.SafeString(html);
+  }.property('text'),
+
+  buildOptions: function() {
+    return {
+      typographer: this.get('typographer'),
+      linkify: this.get('linkify')
+    };
+  }.property('typographer', 'linkify', 'html')
+});
+```
+
+`app/components/templates/md-text.hbs`
+```hbs
+{{parsedMarkdown}}
+```
+
+### Test the component
+
+```javascript
+import Ember from 'ember';
+
+import {
+  moduleForComponent,
+  test
+} from 'ember-qunit';
+
+moduleForComponent('md-text', 'MdTextComponent', {
+  // specify the other units that are required for this test
+  // needs: ['component:foo', 'helper:bar']
+});
+
+test('it renders', function() {
+  // creates the component instance
+  var component = this.subject();
+  equal(component._state, 'preRender');
+
+  // appends the component to the page
+  this.append();
+  equal(component._state, 'inDOM');
+});
+
+test('it displays text', function() {
+  var component = this.subject();
+  component.set('text', '# Markdown is fun');
+
+  var $component = this.append();
+  equal($component.text().trim(), 'Markdown is fun');
+});
+
+test('it properly parses the markdown', function() {
+  var component = this.subject();
+  component.set('text', '# Markdown is fun');
+
+  var $component = this.append();
+  equal($component.find('h1').length, 1);
+});
+```
