@@ -67,12 +67,12 @@ ok 5 PhantomJS 1.9 - JSHint - .: router.js should pass jshint
 # ok
 ```
 
-Now that everything is in order, we need to add a bower dependency for the remarkable library.
+Now that everything is in order, we need to add the remarkable library.
 
 ## Adding a bower dependency
 
 In order to add a bower dependency, we need to create an addon
-[blueprint](http://www.ember-cli.com/#generators-and-blueprints) that adds the bower dependency:
+[blueprint](http://www.ember-cli.com/#generators-and-blueprints) that installs the dependency:
 
 ```
 ember g blueprint ember-remarkable
@@ -316,7 +316,46 @@ This will register the helper, but allow the app to override the addon if they s
 
 ## Implementing a component
 
-`app/components/md-text.js`
+The CLI provides us with a nice generator for components which we can leverage here:
+
+```
+ember g component md-text
+```
+
+This will generate a component, `app/components/md-text.js`, and its template, `app/templates/components/md-text.hbs`.
+
+
+### Importing from the addon directory
+
+Similarly to what we did with the helper, we want to move the component to the `addon` directory so that
+it allows the addon to be overridden.
+
+We can do that with:
+
+```
+cp -r app/components addon
+```
+
+Then, in `app/components/md-text`, we can import the addon.
+
+```javascript
+import mdText from 'ember-remarkable/components/md-text';
+
+export default mdText;
+```
+
+### Implementing the component
+
+
+_Note:_ This post will gloss over components and how they work in Ember. If you'd like to diver deeper
+into Ember Components please visit: <http://emberjs.com/guides/components/>.
+
+Firstly, we will define a few properties: `text`, `typographer`, and `linkify`. These will be options
+that can be passed into the component `{{ "{{md-text text=someText linkify=true" }}}}`.
+
+We also add a few computed properties for the `parsedOptions` and `buildOptions` and are left with the
+following in `app/components/md-text.js`:
+
 ```javascript
 import Ember from 'ember';
 import Remarkable from 'remarkable';
@@ -338,16 +377,78 @@ export default Ember.Component.extend({
       typographer: this.get('typographer'),
       linkify: this.get('linkify')
     };
-  }.property('typographer', 'linkify', 'html')
+  }.property('typographer', 'linkify')
 });
 ```
 
+Then, we ensure that `parsedMarkdown` is being displayed in the template.
+
 `app/components/templates/md-text.hbs`
-```hbs
-{{parsedMarkdown}}
+
+```handlebars
+{{ "{{parsedMarkdown" }}}}
 ```
 
 ### Test the component
+
+#### Use the dummy app for a sanity test
+
+The Ember CLI uses a dummy app in `tests/dummy` for testing. This is actually quite helpful for
+using as a sanity testing mechanism, too. In `tests/dummy/app/templates/application.hbs` you can put
+calls to both the helper and component:
+
+```handlebars
+{{ "{{md '# Markdown!'" }}}}
+{{ "{{md-text text='# Markdownnnnnn \n http://google.com' linkify=true" }}}}
+```
+
+Then, with `ember serve`, you can navigate to `localhost:4200` to ensure that everything is working
+as expected.
+
+#### Unit tests
+
+A unit testing file was automatically created by the generator when we created the component. So,
+we are ready to get started.
+
+Firstly, we can add a rendering test to ensure that the component is correctly rendered to the page:
+
+```javascript
+test('it renders', function() {
+  // creates the component instance
+  var component = this.subject();
+  equal(component._state, 'preRender');
+
+  // appends the component to the page
+  this.append();
+  equal(component._state, 'inDOM');
+});
+```
+
+Then, we want a test to make sure the proper text was displayed to the page:
+
+```javascript
+test('it displays text', function() {
+  var component = this.subject();
+  component.set('text', '# Markdown is fun');
+
+  var $component = this.append();
+  equal($component.text().trim(), 'Markdown is fun');
+});
+```
+
+And lastly, we want to make sure that we are calling remarkable correctly, and resulting in HTML:
+
+```javascript
+test('it properly parses the markdown', function() {
+  var component = this.subject();
+  component.set('text', '# Markdown is fun');
+
+  var $component = this.append();
+  equal($component.find('h1').length, 1);
+});
+```
+
+We result in the following:
 
 ```javascript
 import Ember from 'ember';
@@ -388,3 +489,14 @@ test('it properly parses the markdown', function() {
   equal($component.find('h1').length, 1);
 });
 ```
+
+Running the tests with `ember t` should show passing tests. Yay.
+
+## Conclusion
+
+As one can see, the Ember CLI is an unbelievable powerful tool. Its adoption of convention over configuration
+makes it relatively trivial to break application logic into standalone addons for sharing among applications.
+It's also beneficial, because an addon is an easily digestible collection of logic that can be tested
+and extended upon in isolation. In my opinion, this leads to developer happiness.
+
+Thanks for reading.
