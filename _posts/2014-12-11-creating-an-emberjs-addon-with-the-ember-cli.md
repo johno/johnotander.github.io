@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating an Ember.js Addon with the Ember CLI.
+title: Creating an Ember.js Addon with the Ember CLI
 summary: Thanks to the power of the Ember CLI, reusing code and functionality between apps has never been easier.
 category: ember
 ---
@@ -494,9 +494,11 @@ Running the tests with `ember t` should show passing tests. Yay.
 
 ## Conclusion
 
-As one can see, the Ember CLI is an unbelievable powerful tool. Its adoption of convention over configuration
+As one can see, the Ember CLI is an unbelievably powerful tool. Its adoption of convention over configuration
 makes it relatively trivial to break application logic into standalone addons for sharing among applications.
 It's also beneficial, because an addon is an easily digestible collection of logic that can be tested
 and extended upon in isolation. In my opinion, this leads to developer happiness.
+
+The source code for this post can be found here: <https://github.com/johnotander/ember-remarkable>.
 
 Thanks for reading.
