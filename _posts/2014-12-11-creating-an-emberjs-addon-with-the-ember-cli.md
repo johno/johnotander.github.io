@@ -7,7 +7,7 @@ category: ember
 
 Thanks to the power of the Ember CLI, reusing code and functionality between apps has never been easier. To
 get an idea of the addons that already exist in this ecosystem, check out <http://emberaddons.com>. At the
-time of writing this, there are already more than 300 addons listed. Many of which can drastically help
+time of writing this, there are already more than 400 addons listed. Many of which can drastically help
 you cut down on development time. So, let's get started!
 
 For this example, we will be creating an Ember CLI addon for the [remarkable](https://github.com/jonschlinkert/remarkable)
@@ -32,15 +32,14 @@ with the following command:
 ember addon <your-addon-name>
 ```
 
-For the purposes of this example, I will create the `ember-remarkable` addon. So I will use the
-following command:
+For the purposes of this example, I will create the `ember-remarkable` addon with:
 
 ```
 ember addon ember-remarkable
 ```
 
 This will install all npm and bower dependencies, and create the necessary scaffold to begin
-implementing your addon. Now, to ensure everything is workin as expected, you can run the initial
+implementing your addon. Now, to ensure everything is working as expected, you can run the initial
 tests, which consist of jshinting, with:
 
 ```
@@ -80,8 +79,8 @@ ember g blueprint ember-remarkable
 
 This will create the file `blueprints/ember-remarkable/index.js` which is where we can introduce the remarkable
 dependency. Throughout the build process with the Ember CLI, there are numerous hooks that are introduced. For
-this addon, we want to tie into the `afterInstall` hook, which is executed when the generator is run after the
-addon is installed as an npm dependency in an Ember CLI app.
+this addon, we want to tie into the `afterInstall` hook, which is executed when the blueprint generator is run
+after the addon is installed as an npm dependency in an Ember CLI app.
 
 To create the hook and add the remarkable depdendency, we can modify `blueprints/ember-remarkable/index.js`
 like so:
@@ -163,13 +162,16 @@ In order to generate a helper, you can run the following Ember CLI command:
 ember g helper md-remarkable
 ```
 
-This will create the helper, with a test file. However, the helper is created in `app/helpers`, which
+This will create the helper with a test file. However, the helper is created in `app/helpers`, which
 isn't where we want the helper to be located. We want to keep the helper in the `addon/helpers` directory.
 This ensures that the helper doesn't stomp on anything defined by the user.
 
 So, we will have to move the `helpers` directory with `mv app/helpers addon`.
 
 ### Testing the helper
+
+We can use a Qunit equality test to ensure that the markdown string is being turned into the correct
+HTML equivalent.
 
 ```javascript
 import {
@@ -188,6 +190,9 @@ You can verify that the test is failing with `ember t`.
 
 ### Implementing the helper
 
+Using the Remarkable API, we can convert markdown being passed to the helper into
+HTML with the following:
+
 ```javascript
 import Ember from 'ember';
 
@@ -200,8 +205,8 @@ export default Ember.Handlebars.makeBoundHelper(mdRemarkable);
 ```
 
 Now, you can run the tests with `ember t` and see that the test is passing, however, the linting tests
-are now failing because we are implicitly calling the `Remarkable` constructor, and jshint doesn't now
-that it is accessible globally.
+are now failing because we are implicitly calling the `Remarkable` constructor, and jshint doesn't know
+that it is globally accessible.
 
 ```
 not ok 4 PhantomJS 1.9 - JSHint - ember-export-application-global/helpers: ember-export-application-global/helpers/md-remarkable.js should pass jshint
@@ -217,8 +222,8 @@ not ok 4 PhantomJS 1.9 - JSHint - ember-export-application-global/helpers: ember
     ...
 ```
 
-The easy fix is to modify the `.jshintrc` to make it not complain, however, we can also create a shim
-to mimic ES6 functionality.
+The easy fix is to modify the `.jshintrc` to make ignore the global assumption, however, we can also create a shim
+to mimic ES6 functionality. The latter is the preferred route.
 
 #### Creating a shim
 
@@ -292,6 +297,8 @@ And, if we run the tests again, everything passes!
 
 ## Creating the initializer
 
+The Ember CLI has our backs again with a blueprint for initializers.
+
 ```
 ember g initializer ember-remarkable
 ```
@@ -346,8 +353,7 @@ export default mdText;
 
 ### Implementing the component
 
-
-_Note:_ This post will gloss over components and how they work in Ember. If you'd like to diver deeper
+_Note:_ This post will gloss over components and how they work in Ember. If you'd like to dive deeper
 into Ember Components please visit: <http://emberjs.com/guides/components/>.
 
 Firstly, we will define a few properties: `text`, `typographer`, and `linkify`. These will be options
@@ -496,7 +502,7 @@ Running the tests with `ember t` should show passing tests. Yay.
 
 As one can see, the Ember CLI is an unbelievably powerful tool. Its adoption of convention over configuration
 makes it relatively trivial to break application logic into standalone addons for sharing among applications.
-It's also beneficial, because an addon is an easily digestible collection of logic that can be tested
+It's also beneficial because an addon is an easily digestible collection of logic that can be tested
 and extended upon in isolation. In my opinion, this leads to developer happiness.
 
 The source code for this post can be found here: <https://github.com/johnotander/ember-remarkable>.
