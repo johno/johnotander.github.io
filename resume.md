@@ -24,12 +24,13 @@ _Graduated with High Honors_
 
 ## Buzz Words
 
-Ruby, Rails, AJAX, Javascript/Coffescript, jQuery, JSON, CSS, Sass/Scss, iOS, Objective-C, Android, Java, HTML/HAML/Mustache/Handlebars, Git, Rspec, SQL, Postgres, Ember, Bower, Gulp, Yeoman, Grunt, TDD, Agile development, AWS, ImageMagick, C
+Ruby, Rails, Javascript/Coffescript, Node, Ember, Ember CLI, ES6, Bower, Gulp, Yeoman, jQuery, Jekyll, JSON, AJAX, CSS, Sass/Scss, Rework, PostCSS, Web Components, d3.js, Data Visualization, HTML/HAML/Mustache/Handlebars, Git, Rspec, SQL, Postgres, TDD, Agile development, AWS, ImageMagick, C
 
 ## Skills
 
-  - Full stack Ruby on Rails development
+  - Full stack Ruby on Rails and Node development
   - Efficient, simple, and beautiful CSS/HTML
+  - Experienced building client side apps with Ember
   - Ability to perform under pressure
   - Well versed in Software Development best practices
   - Astute attention to detail
@@ -37,12 +38,34 @@ Ruby, Rails, AJAX, Javascript/Coffescript, jQuery, JSON, CSS, Sass/Scss, iOS, Ob
   - Practitioner of unobtrusive Javascript
   - Passionate about learning new technology
 
+Currently learning about Elixir, the Phoenix Framework, Web Sockets
+
+## Notable Projects
+
+##### Personal
+
+* <https://github.com/johnotander/pixyll>
+* <https://github.com/johnotander/furtive>
+* <https://github.com/johnotander/deleted>
+* <https://github.com/johnotander/rework-flex-grid>
+* <https://github.com/johnotander/scrutinize>
+* <https://github.com/johnotander/ember-cli-gravatar>
+* <https://github.com/johnotander/urls_for_humans>
+
+##### Contributing
+
+* <https://github.com/jxnblk/get-css>
+* <https://github.com/jxnblk/css-statistics>
+* <https://github.com/elabs/pundit>
+* <https://github.com/rwjblue/ember-cli-divshot>
+* <https://github.com/fourseven/pure-sass>
+
 ## Work Experience
 
-#### A10 Networks, Software Engineer - Boise, ID
+#### A10 Networks, Senior Software Engineer - Boise, ID
 _March 2014 - Present_
  
-Responsible for developing and designing cloud configuration infrastructure for network appliances, including web apps, API design, and asset optimization. Tasked with developing an internal front end framework (Bootstrap wrapper) for all web products. Primary technologies: Ruby on Rails, CSS, SCSS, HTML, and Javascript.
+Responsible for developing and designing cloud configuration infrastructure for network appliances, including web apps, API design, and asset optimization. Tasked with developing an internal front end framework (Bootstrap wrapper) for all web products. Primary technologies: Ruby on Rails, Javascript, Gulp, Node, Ember, CSS, SCSS, Jekyll, and HTML.
 
 
 #### Uceem Networks, Developer - Boise, ID   
@@ -60,6 +83,7 @@ Duties and Responsibilities
   - Continuous open source contributions to relevant libraries and gems
   - Collaborating and coordinating with a small, nimble team
 
+
 #### Margin.io, Co-founder - Boise, ID   
 _Summer 2013 - Present_  
 Lead developer/designer for a web application consultancy with clients that include a startup from the Silicon Valley. Tasks include managing, coordinating, and collaborating with a development team, delivering contracts on a strict deadline, and ensuring company-wide adherence to coding best practices.
@@ -68,9 +92,11 @@ Lead developer/designer for a web application consultancy with clients that incl
 _Summer 2010 - Summer 2012_  
 Designed custom, static websites with clean, responsive CSS, HTML, and Javascript/JQuery.
 
+
 #### Computers Unlimited, Intern - Bozeman, MT   
 _Summer 2009_  
 Primarily tasked with debugging large-scale information management software in C#, SQL, Synergy, and converting antiquated procedural code to a new, Object-Oriented software system.
+
 
 #### Hauser Architects, Intern - San Francisco, CA   
 _Summer 2007_  
@@ -78,10 +104,10 @@ Primarily tasked with web development, design, and maintenance.
 
 ## Activities
 
+Co-organizer of, and speaker at, a local Ruby usergroup: [Localmotion](http://localmotion.io) 
+
 Bronco Appathon 2013, 2nd Place Team  
 _Built an iOS app with map integration and a RESTful Rails API backend in 36 hours_
-
-Co-organizer of, and speaker at, a local Ruby usergroup: [Localmotion](http://localmotion.io) 
 
 Open source contributor
 
