@@ -126,6 +126,14 @@ app, the blueprint can be run with:
 ember g ember-remarkable
 ```
 
+#### Update 1/21/2015
+
+Now, the blueprints will automatically be run when the addon is installed via:
+
+```
+ember install:addon ember-remarkable
+```
+
 And, the remarkable bower package will be installed automatically. Awesome!
 
 ### Import the Javascript file
