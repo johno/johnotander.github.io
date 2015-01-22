@@ -7,7 +7,7 @@ in_nav: false
 
 ## John Otander
 Boise, Idaho   
-[johnotander@gmail.com](mailto:johnotander@gmail.com) | [johnotander.com](http://www.johnotander.com) | [github.com/johnotander](https://github.com/johnotander)
+[johnotander@gmail.com](mailto:johnotander@gmail.com) | [johnotander.com](http://www.johnotander.com) | [github.com/johnotander](https://github.com/johnotander) | [npmjs.org/~johno](https://www.npmjs.com/~johno)
 
 I'm a software craftsman with experience in all facets of web application development. Significant expertise in web/mobile design and user experience by creating aesthetically pleasing user interfaces and intuitive interactions. Skilled at developing modern, RESTful applications with data analytics, 3rd-party API integration, and efficient database queries.
 
