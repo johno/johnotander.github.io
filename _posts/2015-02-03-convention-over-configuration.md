@@ -79,12 +79,12 @@ project snowballs into a 1,000+ file monolith, each related problem was solved i
 Often times, convention and inflexibility cut down on clever solutions. Your domain logic becomes
 more explicit because superfluous noise has disappeared (it's all implicit).
 
-##### Because DRY isn't always good
+## Because DRY isn't always good
 
-If you aren't wasting time rewriting boilerplate over and over, this allows you to repeat things
-when you should. Yes, sometimes it is appropriate to repeat yourself. For example, controllers.
-Please. Repeat. Yourself... Often. If it's not business logic, or easily abstracted into a service,
-you can do it, I promise.
+If you aren't wasting time rewriting boilerplate over and over, you're less likely to refrain
+from repeating yourself when you should. Yes, sometimes it is appropriate to repeat yourself.
+For example, controllers. Please. Repeat. Yourself. If it's not business logic,
+or easily abstracted into a service, you can do it, I promise.
 
 ### Onboarding is simplified
 
@@ -103,7 +103,7 @@ Convention is a valuable tool, but it's a means to an end. The end is a working,
 The end is an ecosystem where developers are productive and happy. It is paramount that established convention
 can be easily extended when necessary. But, like what DHH wrote in
 [Rails is omakase](http://david.heinemeierhansson.com/2012/rails-is-omakase.html) they should be
-rare substitutions that very on context.
+rare, substitutions that vary on context.
 
 When you need that substitution, you'll know. But, until then, I'd like to focus on writing
 code rather than configuration.
