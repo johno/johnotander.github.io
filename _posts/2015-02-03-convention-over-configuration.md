@@ -17,7 +17,7 @@ collaboration and ensure that developers are focused on solving the problem at h
 development trivialities are offloaded from the hands of software teams and handled by the greater
 community, productivity ensues.
 
-##### A community will establish a better set of best practices and paradigms than any single software team.
+## A community will establish a better set of best practices and paradigms than any single software team.
 
 This productivity results from a few characteristics I've observed:
 
