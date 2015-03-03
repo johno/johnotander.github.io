@@ -17,6 +17,7 @@ I'm a software craftsman with experience in all facets of web application develo
 My primary emphasis is the front end, where I write performant, reusable CSS/Javascript and design interfaces that are easy, and a delight, to use. I'm passionate about automation, and invest time in automating tasks with Gulp, Yeoman, and other tools.
 
 ## Education
+
 Boise State University, Boise ID: Bachelor of Science, expected May 2015   
 _Major:_ Computer Science
 <br>
@@ -27,7 +28,7 @@ _Graduated with High Honors_
 
 ## Buzz Words
 
-Ruby, Rails, Javascript/Coffescript, Node, Ember, Ember CLI, ES6, Bower, Gulp, Yeoman, jQuery, Jekyll, JSON, AJAX, CSS, Sass/Scss, Rework, PostCSS, Web Components, d3.js, Data Visualization, HTML/HAML/Mustache/Handlebars, Git, Rspec, SQL, Postgres, TDD, Agile development, AWS, ImageMagick, C
+Ruby, Rails, Javascript/Coffescript, Node, Ember, Ember CLI, React, Polymer, ES6, Bower, Gulp, Yeoman, jQuery, Jekyll, JSON, AJAX, CSS, Sass/Scss, Rework, PostCSS, Web Components, d3.js, HTML/HAML/Mustache/Handlebars, Git, SQL, Postgres, TDD, Agile development, AWS, C
 
 ## Skills
 
@@ -40,8 +41,6 @@ Ruby, Rails, Javascript/Coffescript, Node, Ember, Ember CLI, ES6, Bower, Gulp, Y
   - Exceptional at writing thorough, efficient tests
   - Practitioner of unobtrusive Javascript
   - Passionate about learning new technology
-
-Currently learning about Elixir, the Phoenix Framework, Web Sockets
 
 ## Notable Projects
 
@@ -57,8 +56,9 @@ Currently learning about Elixir, the Phoenix Framework, Web Sockets
 
 ##### Contributing
 
-* <https://github.com/jxnblk/get-css>
-* <https://github.com/jxnblk/css-statistics>
+* <https://github.com/cssstats/cssstats>
+* <https://github.com/cssstats/css-statistics>
+* <https://github.com/cssstats/get-css>
 * <https://github.com/elabs/pundit>
 * <https://github.com/rwjblue/ember-cli-divshot>
 * <https://github.com/fourseven/pure-sass>
