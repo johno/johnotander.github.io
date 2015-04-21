@@ -16,14 +16,5 @@
     "url": "https://github.com/johnotander/johnotander.github.io/issues"
   },
   "homepage": "https://github.com/johnotander/johnotander.github.io",
-  "devDependencies": {
-    "gulp": "^3.8.7",
-    "gulp-autoprefixer": "0.0.8",
-    "gulp-concat": "^2.3.4",
-    "gulp-csslint": "^0.1.5",
-    "gulp-minify-css": "^0.3.7",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^0.7.3",
-    "gulp-watch": "^0.6.9"
-  }
+  "devDependencies": {}
 }
