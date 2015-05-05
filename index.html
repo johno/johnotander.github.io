@@ -1,5 +1,10 @@
 ---
 layout: default
 ---
+<div class="container">
+  <p>{{site.authorData.about | newline_to_br}}</p>
 
-
+  {% for project in site.authorData.projects.featured %}
+    {{project.name}}
+  {% endfor %}
+</div>

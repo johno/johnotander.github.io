@@ -1,4 +1,8 @@
 @import 'basscss';
+@import 'basscss-utility-typography';
+@import 'basscss-responsive-white-space';
+
+@import 'furtive-sticky-footer';
 
 @custom-media --breakpoint-sm (min-width: 40em);
 @custom-media --breakpoint-md (min-width: 52em);
@@ -36,7 +40,7 @@
   --button-padding-x: 1rem;
   --container-width: 64em;
 
-  --darken-1: rgba(0,0,0,.0625);
+  --darken-1: rgba(0,0,0,.0225);
   --darken-2: rgba(0,0,0,.125);
   --darken-3: rgba(0,0,0,.25);
   --darken-4: rgba(0,0,0,.5);
@@ -44,4 +48,19 @@
   --border-width: 1px;
   --border-radius: 3px;
   --border-color: var(--darken-2);
+}
+
+html {
+  font-size: 15px;
+}
+
+@media (--breakpoint-md) {
+  html {
+    font-size: 18px;
+  }
+}
+
+.no-underline,
+.no-underline:matches(:hover, :focus, :active) {
+  text-decoration: none;
 }
