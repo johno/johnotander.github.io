@@ -2,7 +2,10 @@
 @import 'basscss-utility-typography';
 @import 'basscss-responsive-white-space';
 
+@import 'girth/css/girth.css';
 @import 'furtive-sticky-footer';
+
+@import './src/css/highlighting.css';
 
 @custom-media --breakpoint-sm (min-width: 40em);
 @custom-media --breakpoint-md (min-width: 52em);
@@ -15,6 +18,7 @@
   --heading-font-weight: bold;
   --heading-line-height: 1.25;
   --monospace-font-family: 'Source Code Pro', Consolas, monospace;
+  --serif-font-family: Georgia, serif;
   --h1: 2rem;
   --h2: 1.5rem;
   --h3: 1.25rem;
@@ -40,6 +44,7 @@
   --button-padding-x: 1rem;
   --container-width: 64em;
 
+  --green: #3d9970;
   --darken-1: rgba(0,0,0,.0225);
   --darken-2: rgba(0,0,0,.125);
   --darken-3: rgba(0,0,0,.25);
@@ -58,6 +63,39 @@ html {
   html {
     font-size: 18px;
   }
+}
+
+p {
+  font-family: var(--serif-font-family);
+}
+
+pre {
+  background-color: var(--darken-1);
+  padding: var(--space-2);
+}
+
+code {
+  background-color: var(--darken-1);
+}
+
+pre code {
+  background-color: transparent;
+}
+
+.container {
+  max-width: 48rem;
+}
+
+.h0 {
+  font-size: 4rem;
+}
+
+.thin {
+  font-weight: 200;
+}
+
+.serif {
+  font-family: var(--serif-font-family);
 }
 
 .no-underline,

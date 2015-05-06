@@ -24,6 +24,7 @@
     "basscss-utility-typography": "^1.0.1",
     "clean-css": "^3.2.8",
     "furtive-sticky-footer": "0.0.1",
+    "girth": "0.0.4",
     "johno-api": "^1.0.1",
     "js-yaml": "^3.3.0"
   }

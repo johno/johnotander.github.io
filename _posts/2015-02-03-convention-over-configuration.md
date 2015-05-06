@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convention over configuration
+title: Convention Over Configuration
 summary: A thought piece on why I think convention over configuration is a good thing.
 category: ember
 ---
