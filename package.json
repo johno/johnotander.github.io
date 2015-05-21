@@ -4,6 +4,7 @@
   "description": "I build things by banging on a keyboard",
   "main": "index.js",
   "scripts": {
+    "start": "node build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,14 +17,17 @@
     "url": "https://github.com/johnotander/johnotander.github.io/issues"
   },
   "homepage": "https://github.com/johnotander/johnotander.github.io",
-  "devDependencies": {
-    "gulp": "^3.8.7",
-    "gulp-autoprefixer": "0.0.8",
-    "gulp-concat": "^2.3.4",
-    "gulp-csslint": "^0.1.5",
-    "gulp-minify-css": "^0.3.7",
-    "gulp-rename": "^1.2.0",
-    "gulp-sass": "^0.7.3",
-    "gulp-watch": "^0.6.9"
+  "devDependencies": {},
+  "dependencies": {
+    "basscss": "^6.0.2",
+    "basscss-responsive-white-space": "0.0.1",
+    "basscss-utility-typography": "^1.0.1",
+    "clean-css": "^3.2.8",
+    "furtive-sticky-footer": "0.0.1",
+    "girth": "0.0.4",
+    "glob": "^5.0.6",
+    "johno-api": "^1.0.1",
+    "js-yaml": "^3.3.0",
+    "uncss": "^0.12.1"
   }
 }

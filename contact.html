@@ -1,33 +1,24 @@
 ---
-layout: page
-link_text: Contact.
-title: Say Hello
-in_nav: true
+layout: default
 ---
 
-<div class="mt2 small">
-  <a class="h5 dark-gray" href="mailto:{{ site.email }}">
-    <i class="icon-mail"></i> Email
-  </a> &nbsp;
-  <a class="h5 dark-gray" href="https://twitter.com/4lpine">
-    <i class="icon-twitter"></i> Twitter
-  </a> &nbsp;
-  <a class="h5 dark-gray" href="https://github.com/johnotander">
-    <i class="icon-github"></i> Github
-  </a>
-</div>
+<div class="container">
+  <div class="mt4 small px1">
+    <a class="h6 mid-gray caps" href="mailto:{{ site.authorData.email }}">Email</a> &nbsp;
+    <a class="h6 mid-gray caps" href="https://twitter.com/4lpine">Twitter</a> &nbsp;
+    <a class="h6 mid-gray caps" href="https://github.com/johnotander">Github</a> &nbsp;
+    <a class="h6 mid-gray caps" href="https://keybase.io/johno">Keybase</a>
+  </div>
 
-<div class="py2">
-  <form action="https://forms.brace.io/johnotander@gmail.com" method="POST" class="form form-stacked form-light">
-    <input type="text" name="email" class="input mobile-block field-big" placeholder="Email Address">
-    <textarea type="text" name="content" class="input mobile-block field-big" rows="5" placeholder="What would you like to say?"></textarea>
-    <input type="hidden" name="_next" value="//johnotander.com/thanks" />
-    <input type="submit" class="button button-primary button-big mobile-block" value="Say Hello">
-  </form>
-</div>
-
-<div class="center">
-  <p class="mt4 small muted">
-    If you'd like to contact me securely, I'm on Keybase.io: <a href="https://keybase.io/johno">https://keybase.io/johno</a>.
-  </p>
+  <div class="clearfix py1">
+    <div class="sm-col sm-col-3 px1 md-show">
+      <img src="/public/images/me.jpeg" alt="John Otander on the internet" title="John Otander on the internet">
+    </div>
+    <form action="https://forms.brace.io/johnotander@gmail.com" method="POST" class="sm-col sm-col-9">
+      <input type="text" name="email" class="block full-width mb1 field-light" placeholder="Email Address">
+      <textarea type="text" name="content" class="block full-width mb1 field-light" rows="5" placeholder="What would you like to say?"></textarea>
+      <input type="hidden" name="_next" value="//johnotander.com/thanks" />
+      <input type="submit" class="button button-primary" value="Say Hello">
+    </form>
+  </div>
 </div>
