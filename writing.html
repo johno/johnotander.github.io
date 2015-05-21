@@ -4,16 +4,14 @@ in_nav: true
 link_text: Writing.
 ---
 
-<div class="border-top">
-  <div class="container py4">
-    {% for post in site.posts %}
-      <div class="mt1">
-        <a href="{{post.url}}" class="no-underline">
-          <h3 class="h1 black mb0">{{post.title}}</h3>
-        </a>
-        <span class="h6 gray">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <p class="h3 mt2">{{post.summary}}</p>
-      </div>
-    {% endfor %}
-  </div>
+<div class="container py4">
+  {% for post in site.posts %}
+    <div class="mt1">
+      <a href="{{post.url}}" class="no-underline">
+        <h3 class="h1 black mb0">{{post.title}}</h3>
+      </a>
+      <span class="h6 gray">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <p class="h3 mt2">{{post.summary}}</p>
+    </div>
+  {% endfor %}
 </div>
