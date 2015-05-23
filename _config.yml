@@ -85,7 +85,7 @@ authorData:
       - name: Grayscale
         description: A grayscale color palette for prototyping the web.
         url: 'http://www.g-r-a-y-s-c-a-l-e.com/'
-        github_url: 'https://github.com/johnotander/ember-cli-gravata://github.com/johnotander/gray'
+        github_url: 'https://github.com/johnotander/gray'
       - name: Urls for Humans
         description: 'Apply persistent, meaningful urls to your Rails app.'
         url: 'https://github.com/johnotander/urls_for_humans'

@@ -26,7 +26,7 @@
     "furtive-sticky-footer": "0.0.1",
     "girth": "0.0.4",
     "glob": "^5.0.6",
-    "johno-api": "^1.0.1",
+    "johno-api": "^1.0.2",
     "js-yaml": "^3.3.0",
     "uncss": "^0.12.1"
   }
