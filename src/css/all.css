@@ -13,7 +13,7 @@
 
 :root {
   --font-family: 'Helvetica Neue', Helvetica, sans-serif;
-  --line-height: 1.5;
+  --line-height: 1.6;
   --heading-font-family: var(--font-family);
   --heading-font-weight: bold;
   --heading-line-height: 1.25;
@@ -56,12 +56,12 @@
 }
 
 html {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 @media (--breakpoint-md) {
   html {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 
@@ -69,21 +69,26 @@ p {
   font-family: var(--serif-font-family);
 }
 
+pre::-webkit-scrollbar { 
+  display: none; 
+}
+
 pre {
   background-color: var(--darken-1);
   padding: var(--space-2);
+  overflow-x: auto;
 }
 
 code {
   background-color: var(--darken-1);
 }
 
-pre code {
+pre > code {
   background-color: transparent;
 }
 
 .container {
-  max-width: 48rem;
+  max-width: 42rem;
 }
 
 .h0 {
