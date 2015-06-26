@@ -23,6 +23,7 @@
     "basscss-responsive-white-space": "0.0.1",
     "basscss-utility-typography": "^1.0.1",
     "clean-css": "^3.2.8",
+    "cssnext": "^1.7.1",
     "furtive-sticky-footer": "0.0.1",
     "girth": "0.0.4",
     "glob": "^5.0.6",
