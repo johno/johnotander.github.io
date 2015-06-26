@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Jekyll and Uncss
-summary: An example using Jekyll and Uncss to ensure unused CSS is removed during the build.
+title: Jekyll and UnCSS
+summary: An example using Jekyll and UnCSS to ensure unused CSS is removed during the build.
 category: Jekyll
 ---
 
