@@ -49,6 +49,7 @@ var glob = require('glob')
 var fs = require('fs')
 
 var stylesheetLocation = '_site/css/'
+var stylesheetSourceLocation = 'css/'
 var stylesheetName = 'main.css'
 
 var jekyllUncss = function() {
@@ -67,7 +68,7 @@ var jekyllUncss = function() {
         console.log(err)
       }
 
-      fs.writeFileSync(stylesheetLocation + 'un.' + stylesheetName, output)
+      fs.writeFileSync(stylesheetSourceLocation + 'un.' + stylesheetName, output)
     })
   })
 }
