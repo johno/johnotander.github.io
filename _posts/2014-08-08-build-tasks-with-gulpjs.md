@@ -9,7 +9,7 @@ After some experimentation with both Gulp and Grunt, I've found the former to be
 
 ### Installing Gulp
 
-_Gulp uses Node, so if you don't have it installed, you can do so [here](http://howtonode.org/how-to-install-nodejs)_
+_Gulp uses Node, so if you don't have it installed, you can do so [here](http://howtonode.org/how-to-install-nodejs) or [here](https://blog.udemy.com/node-js-tutorial/)_
 
 Once Node is installed, you have access to the Node Package Manager, `npm`:
 
