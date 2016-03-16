@@ -4,31 +4,23 @@
   "description": "I build things by banging on a keyboard",
   "main": "index.js",
   "scripts": {
-    "start": "node build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npm run build",
+    "build": "node build/config && npm run build:jekyll && npm run build:css && npm run build:uncss && npm run build:minify",
+    "build:css": "tachyons src/css/all.css > src/css/c.css",
+    "build:jekyll": "jekyll build",
+    "build:minify": "tachyons public/css/c.css > public/css/c.min.css --minify",
+    "build:uncss": "node build/uncss"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johnotander/johnotander.github.io.git"
-  },
+  "repository": "johnotander/johnotander.github.io",
   "author": "John Otander",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/johnotander/johnotander.github.io/issues"
-  },
-  "homepage": "https://github.com/johnotander/johnotander.github.io",
   "devDependencies": {},
   "dependencies": {
-    "basscss": "^6.0.2",
-    "basscss-responsive-white-space": "0.0.1",
-    "basscss-utility-typography": "^1.0.1",
-    "clean-css": "^3.2.8",
-    "cssnext": "^1.7.1",
-    "furtive-sticky-footer": "0.0.1",
-    "girth": "0.0.4",
     "glob": "^5.0.6",
     "johno-api": "^1.0.3",
     "js-yaml": "^3.3.0",
+    "tachyons": "^4.0.0-beta.12",
+    "tachyons-cli": "^0.6.0",
     "uncss": "^0.12.1"
   }
 }
