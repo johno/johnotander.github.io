@@ -17,7 +17,7 @@
   "devDependencies": {},
   "dependencies": {
     "glob": "^5.0.6",
-    "johno-api": "^1.0.3",
+    "johno-api": "^1.1.0",
     "js-yaml": "^3.3.0",
     "tachyons": "^4.0.0-beta.12",
     "tachyons-cli": "^0.6.0",

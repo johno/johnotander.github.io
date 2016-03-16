@@ -1151,6 +1151,7 @@ code, .code { font-family: Consolas, monaco, monospace; }
 .debug * { outline: 1px solid gold; }
 /* Uncomment out this line if you want to debug your layout */
 /* @import './_debug'; */
+br { margin-top: 1rem; }
 @media screen and (min-width: 48em) {
  .bg-cv-ns { background-size: cover; }
  .bg-cn-ns { background-size: contain; }
