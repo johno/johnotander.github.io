@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
-<body class="page">
-<div class="px1">
-  {% include header.html %}
-  <div class="page-content">
-    {{ content }}
+<body>
+  <div class="cf ph3 ph5-ns pv5">
+    {% include header.html %}
+    <div class="fn fl-ns w-50-ns">
+      {{ content }}
+    </div>
   </div>
-  {% include footer.html %}
-</div>
 </body>
 </html>
