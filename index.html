@@ -2,4 +2,11 @@
 layout: default
 ---
 
-<p class="f4 lh-copy measure mt0-ns">Hello, my name is John Otander. {{site.authorData.about | newline_to_br}}</p>
+<p class="f4 lh-copy">
+  Hello, my name is John Otander.
+</p>
+
+{% assign paragraphs = site.authorData.about | newline_to_br | split: '<br />' %}
+{% for paragraph in paragraphs %}
+  <p class="f4 lh-copy">{{ paragraph }}</p>
+{% endfor %}

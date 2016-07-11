@@ -42,6 +42,7 @@ body {
  */
 
 article,
+footer,
 header,
 nav,
 section {
@@ -362,6 +363,7 @@ body,
 div,
 article,
 section,
+footer,
 header,
 form,
 pre,
@@ -431,6 +433,10 @@ input[type="text"] {
 
 */
 
+.b--light-gray {
+  border-color: #eee;
+}
+
 /*
 
    BORDER RADIUS
@@ -496,10 +502,6 @@ input[type="text"] {
 
 */
 
-.bw2 {
-  border-width: .25rem;
-}
-
 /*
 
    CODE
@@ -522,20 +524,6 @@ input[type="text"] {
 
 /* Nicolas Gallaghers Clearfix solution
    Ref: http://nicolasgallagher.com/micro-clearfix-hack/ */
-
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
-.cf {
-  *zoom: 1;
-}
 
 /*
 
@@ -588,10 +576,6 @@ input[type="text"] {
      -l  = large
 
 */
-
-.fn {
-  float: none;
-}
 
 /*
 
@@ -840,18 +824,30 @@ code {
 
 */
 
+.pa5 {
+  padding: 4rem;
+}
+
+.pb5 {
+  padding-bottom: 4rem;
+}
+
+.pt2 {
+  padding-top: .5rem;
+}
+
 .pt3 {
   padding-top: 1rem;
 }
 
-.pv5 {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+.pv2 {
+  padding-top: .5rem;
+  padding-bottom: .5rem;
 }
 
-.ph3 {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.ph2 {
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 .mb0 {
@@ -902,11 +898,19 @@ code {
 
 */
 
+.tc {
+  text-align: center;
+}
+
 /*
 
    TEXT TRANSFORM
 
 */
+
+.ttu {
+  text-transform: uppercase;
+}
 
 /*
 
@@ -924,6 +928,10 @@ code {
 
 .f4 {
   font-size: 1.25rem;
+}
+
+.f6 {
+  font-size: .875rem;
 }
 
 /*
@@ -949,6 +957,11 @@ code {
    UTILITIES
 
 */
+
+.center {
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /*
 
@@ -1039,25 +1052,12 @@ code {
 /* @import './_debug'; */
 
 @media screen and (min-width: 48em) {
-  .fl-ns {
-    float: left;
-    display: inline;
+  .pt4-ns {
+    padding-top: 2rem;
   }
 
-  .w-50-ns {
-    width: 50%;
-  }
-
-  .pr4-ns {
-    padding-right: 2rem;
-  }
-
-  .ph5-ns {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .mt0-ns {
-    margin-top: 0;
+  .pv4-ns {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
