@@ -20,16 +20,17 @@ authorData:
   github: johnotander
   keybase: johno
   url: 'http://johnotander.com'
+  logoAsHtmlEntity: '&apE;'
   company_url: 'https://a10networks.com'
   avatar: 'https://gravatar.com/avatar/2e52ef263083c77e2a0a24454dc6f369.png'
   about: >-
     I'm a web developer and designer living in Boise, Idaho.
 
     I don't like to limit myself to developing with particular tools or
-    technologies, but I'm most experienced with Ruby on Rails, Ember, Javascript,
-    and CSS. I'm pretty devoted to making the web a better place: This means
-    considering all users on all devices. This means showing empathy. This means
-    lightweight, responsive websites that are mobile first.
+    technologies, but I'm most experienced with JavaScript, Ruby, and CSS. I'm
+    pretty devoted to making the web a better place: This means considering all
+    users on all devices. This means showing empathy. This means lightweight,
+    responsive websites that are mobile first.
 
     I love leveraging build tools and automating every process I can. I enjoy
     experimenting with new technology and incorporating it into my workflow when
@@ -50,10 +51,10 @@ authorData:
       state: Montana
   projects:
     featured:
-      - name: Pixyll
-        description: 'A simple, beautiful Jekyll theme that is mobile first.'
-        url: 'http://pixyll.com'
-        github_url: 'https://github.com/johnotander/pixyll'
+      - name: Random A11y
+        description: 'Vote on random, accessible color combinations'
+        url: 'http://randoma11y.com'
+        github_url: 'https://github.com/johnotander/random-a11y'
       - name: Tachyons
         description: Functional CSS for humans.
         url: 'http://tachyons.io'
@@ -62,6 +63,10 @@ authorData:
         description: Webapp and node utilities to visualize various stats about your css.
         url: 'http://cssstats.com'
         github_url: 'https://github.com/cssstats'
+      - name: Pixyll
+        description: 'A simple, beautiful Jekyll theme that is mobile first.'
+        url: 'http://pixyll.com'
+        github_url: 'https://github.com/johnotander/pixyll'
       - name: Immutable CSS
         description: A linter for immutable CSS.
         url: 'https://github.com/johnotander/immutable-css'
