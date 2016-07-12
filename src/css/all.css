@@ -1,1 +1,23 @@
 @import "tachyons";
+
+a {
+  color: #00449e;
+}
+
+
+code {
+  background-color: #f8f8f8;
+  padding: .2rem;
+}
+
+pre {
+  background-color: #fafafa;
+  border: thin solid #f8f8f8;
+  font-size: .9rem;
+  overflow-x: scroll;
+  padding: .5rem;
+}
+
+pre > code {
+  background-color: transparent;
+}

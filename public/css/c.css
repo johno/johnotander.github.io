@@ -1,30 +1,28 @@
-/*
+/* TACHYONS v4.0.2| github.com/tachyons-css/tachyons */
 
-  TACHYONS
+/* External Library Includes */
 
-*/
-
-/* Variables */
-
-/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 
 /**
- * 1. Set default font family to sans-serif.
- * 2. Prevent iOS and IE text size adjust after device orientation change,
- *    without disabling user zoom.
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
 
 html {
   font-family: sans-serif;
   /* 1 */
+  line-height: 1.15;
+  /* 2 */
   -ms-text-size-adjust: 100%;
-  /* 2 */
+  /* 3 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
+  /* 3 */
 }
 
 /**
- * Remove default margin.
+ * Remove the margin in all browsers (opinionated).
  */
 
 body {
@@ -35,10 +33,9 @@ body {
    ========================================================================== */
 
 /**
- * Correct `block` display not defined for any HTML5 element in IE 8/9.
- * Correct `block` display not defined for `details` or `summary` in IE 10/11
- * and Firefox.
- * Correct `block` display not defined for `main` in IE 11.
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ * 2. Add the correct display in IE.
  */
 
 article,
@@ -46,67 +43,83 @@ footer,
 header,
 nav,
 section {
+  /* 1 */
   display: block;
 }
 
 /**
- * 1. Correct `inline-block` display not defined in IE 8/9.
- * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ * Add the correct display in IE 9-.
  */
 
 /**
- * Prevent modern browsers from displaying `audio` without controls.
- * Remove excess height in iOS 5 devices.
+ * Add the correct display in iOS 4-7.
  */
 
 /**
- * Address `[hidden]` styling not present in IE 8/9/10.
- * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+/**
+ * Add the correct display in IE 10-.
+ * 1. Add the correct display in IE.
  */
 
 /* Links
    ========================================================================== */
 
 /**
- * Remove the gray background color from active links in IE 10.
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
 
 a {
   background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
 }
 
 /**
- * Improve readability of focused elements when they are also in an
- * active/hover state.
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
  */
 
 a:active,
 a:hover {
-  outline: 0;
+  outline-width: 0;
 }
 
 /* Text-level semantics
    ========================================================================== */
 
 /**
- * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
 /**
- * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
 
 strong {
-  font-weight: bold;
+  font-weight: inherit;
 }
 
 /**
- * Address styling not present in Safari and Chrome.
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
  */
 
 /**
- * Address variable `h1` font-size and margin within `section` and `article`
- * contexts in Firefox 4+, Safari, and Chrome.
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
  */
 
 h1 {
@@ -115,241 +128,161 @@ h1 {
 }
 
 /**
- * Address styling not present in IE 8/9.
+ * Add the correct background and color in IE 9-.
  */
 
 /**
- * Address inconsistent and variable font size in all browsers.
+ * Add the correct font size in all browsers.
  */
 
 /**
- * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
  */
 
 /* Embedded content
    ========================================================================== */
 
 /**
- * Remove border when inside `a` element in IE 8/9/10.
+ * Remove the border on images inside links in IE 10-.
  */
 
 img {
-  border: 0;
+  border-style: none;
 }
 
 /**
- * Correct overflow not hidden in IE 9/10/11.
+ * Hide the overflow in IE.
  */
 
 /* Grouping content
    ========================================================================== */
 
 /**
- * Address margin not present in IE 8/9 and Safari.
- */
-
-/**
- * Address differences between Firefox and other browsers.
- */
-
-/**
- * Contain overflow in all browsers.
- */
-
-pre {
-  overflow: auto;
-}
-
-/**
- * Address odd `em`-unit font size rendering in all browsers.
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
  */
 
 code,
 pre {
   font-family: monospace, monospace;
+  /* 1 */
   font-size: 1em;
+  /* 2 */
 }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
 
 /* Forms
    ========================================================================== */
 
 /**
- * Known limitation: by default, Chrome and Safari on OS X allow very limited
- * styling of `select`, unless a `border` property is set.
+ * 1. Change font properties to `inherit` in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
  */
 
 /**
- * 1. Correct color not being inherited.
- *    Known issue: affects color of disabled elements.
- * 2. Correct font properties not being inherited.
- * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
- */
-
-input,
-textarea {
-  color: inherit;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-  margin: 0;
-  /* 3 */
-}
-
-/**
- * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ * Restore the font weight unset by the previous rule.
  */
 
 /**
- * Address inconsistent `text-transform` inheritance for `button` and `select`.
- * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
- * Correct `select` style inheritance in Firefox.
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
  */
 
 /**
- * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
- *    and `video` controls.
- * 2. Correct inability to style clickable `input` types in iOS.
- * 3. Improve usability and consistency of cursor style between image-type
- *    `input` and others.
- */
-
-input[type="submit"] {
-  -webkit-appearance: button;
-  /* 2 */
-  cursor: pointer;
-  /* 3 */
-}
-
-/**
- * Re-set default cursor for disabled elements.
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
  */
 
 /**
- * Remove inner padding and border in Firefox 4+.
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+
+/**
+ * Remove the inner border and padding in Firefox.
  */
 
 button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
   padding: 0;
 }
 
 /**
- * Address Firefox 4+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
+ * Restore the focus styles unset by the previous rule.
  */
 
-input {
-  line-height: normal;
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
 }
 
 /**
- * It's recommended that you don't attempt to style these elements.
- * Firefox's implementation doesn't respect box-sizing, padding, or width.
- *
- * 1. Address box sizing set to `content-box` in IE 8/9/10.
- * 2. Remove excess padding in IE 8/9/10.
+ * Change the border, margin, and padding in all browsers (opinionated).
  */
 
 /**
- * Fix the cursor style for Chrome's increment/decrement buttons. For certain
- * `font-size` values of the `input`, it causes the cursor style of the
- * decrement button to change from `default` to `text`.
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
  */
 
 /**
- * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ * Remove the default vertical scrollbar in IE.
  */
 
 /**
- * Remove inner padding and search cancel button in Safari and Chrome on OS X.
- * Safari (but not Chrome) clips the cancel button when the search input has
- * padding (and `textfield` appearance).
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
  */
 
 /**
- * Define consistent border, margin, and padding.
+ * Correct the cursor style of increment and decrement buttons in Chrome.
  */
 
 /**
- * 1. Correct `color` not being inherited in IE 8/9/10/11.
- * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
  */
 
 /**
- * Remove default vertical scrollbar in IE 8/9/10/11.
+ * Remove the inner padding and cancel buttons in Chrome and Safari on OS X.
  */
-
-textarea {
-  overflow: auto;
-}
 
 /**
- * Don't inherit the `font-weight` (applied by a rule above).
- * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
  */
-
-/* Tables
-   ========================================================================== */
 
 /**
- * Remove most spacing between table cells.
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
  */
 
-/*
-
-  CUSTOM MEDIA QUERIES
-
-  Media query values can be changed to fit your own content.
-  There are no magic bullets when it comes to media query width values.
-  They should be declared in em units - and they should be set to meet
-  the needs of your content.
-
-  These media queries can be referenced like so:
-
-  @media (--breakpoint-not-small) {
-    .medium-and-larger-specific-style {
-      background-color: red;
-    }
-  }
-
-  @media (--breakpoint-medium) {
-    .medium-screen-specific-style {
-      background-color: red;
-    }
-  }
-
-  @media (--breakpoint-large) {
-    .large-screen-specific-style {
-      background-color: red;
-    }
-  }
-
-  @media (--breakpoint-extra-large) {
-    .extra-large-screen-specific-style {
-      background-color: red;
-    }
-  }
-
-*/
+/* Variables */
 
 /*
 
    Tachyons
    COLOR VARIABLES
 
-   - Grayscale
-   - Blues
-   - Teals
-   - Green
-   - Reds
-   - Oranges
-   - Yellows
-   - Pink
-   - Purple
-
+   Grayscale
+   - Solids
+   - Transparencies
 */
 
 /* Modules */
@@ -365,7 +298,6 @@ article,
 section,
 footer,
 header,
-form,
 pre,
 code,
 p,
@@ -374,9 +306,7 @@ ol,
 li,
 dl,
 dt,
-dd,
-textarea,
-input[type="text"] {
+dd {
   box-sizing: border-box;
 }
 
@@ -384,18 +314,16 @@ input[type="text"] {
 
    BACKGROUND SIZE
 
-   Base:
-    bg = background-size
-
-   Modifiers:
-    -cv = cover
-    -cn = contain
-
    Media Query Extensions:
      -ns = not-small
      -m  = medium
      -l  = large
 
+*/
+
+/*
+  Often used in combination with background image set as an inline style
+  on an html element.
 */
 
 /*
@@ -504,6 +432,17 @@ input[type="text"] {
 
 /*
 
+  BOX-SHADOW
+
+  Media Query Extensions:
+   -ns = not-small
+   -m  = medium
+   -l  = large
+
+ */
+
+/*
+
    CODE
 
 */
@@ -549,6 +488,19 @@ input[type="text"] {
      -l  = large
 
 */
+
+/*
+  This will set table to full width and then
+  all cells will be equal width
+*/
+
+/*
+
+FLEXBOX
+
+ */
+
+/* 1. Fix for Chrome 44 bug. https://code.google.com/p/chromium/issues/detail?id=506893 */
 
 /* Media Query Variables */
 
@@ -624,14 +576,6 @@ code {
 */
 
 /* Height Scale */
-
-.h1 {
-  height: 1rem;
-}
-
-.h3 {
-  height: 4rem;
-}
 
 /* Height Percentages */
 
@@ -741,6 +685,10 @@ code {
 
 /* Width Scale */
 
+.w3 {
+  width: 4rem;
+}
+
 /*
 
     OVERFLOW
@@ -752,6 +700,12 @@ code {
     POSITIONING
 
  */
+
+/*
+
+  Opacity
+
+*/
 
 /*
 
@@ -773,7 +727,7 @@ code {
 /* Text colors */
 
 .black {
-  color: #111;
+  color: #000;
 }
 
 .mid-gray {
@@ -798,7 +752,7 @@ code {
    SPACING
 
    An eight step powers of two scale ranging from 0 to 16rem.
-   Namespaces are composab4e and thus high4y grockab4e - check the legend below
+   Namespaces are composable and thus highly grockable - check the legend below
 
    Legend:
 
@@ -840,6 +794,10 @@ code {
   padding-top: 1rem;
 }
 
+.pt4 {
+  padding-top: 2rem;
+}
+
 .pv2 {
   padding-top: .5rem;
   padding-bottom: .5rem;
@@ -854,14 +812,6 @@ code {
   margin-bottom: 0;
 }
 
-.mb1 {
-  margin-bottom: .25rem;
-}
-
-.mb2 {
-  margin-bottom: .5rem;
-}
-
 .mb3 {
   margin-bottom: 1rem;
 }
@@ -870,17 +820,15 @@ code {
   margin-top: 0;
 }
 
-.mt1 {
-  margin-top: .25rem;
-}
-
 .mt2 {
   margin-top: .5rem;
 }
 
-.mt4 {
-  margin-top: 2rem;
-}
+/*
+
+  TABLES
+
+*/
 
 /*
 
@@ -888,15 +836,15 @@ code {
 
 */
 
-.no-underline {
-  text-decoration: none;
-}
-
 /*
 
   TEXT ALIGN
 
 */
+
+.tc {
+  text-align: center;
+}
 
 /*
 
@@ -922,6 +870,10 @@ code {
   font-size: 2.25rem;
 }
 
+.f3 {
+  font-size: 1.5rem;
+}
+
 .f4 {
   font-size: 1.25rem;
 }
@@ -936,23 +888,38 @@ code {
 
 */
 
-/* Measure is limited to ~75 characters */
+/* Measure is limited to ~66 characters */
 
-.measure {
-  max-width: 30em;
+/* Measure is limited to ~80 characters */
+
+.measure-wide {
+  max-width: 34em;
 }
 
 /* Measure is limited to ~45 characters */
 
 /* Book paragraph style - paragraphs are indented with no vertical spacing. */
 
-/* Combine this class with a width to truncate text */
+/* Combine this class with a width to truncate text (or just leave as is to truncate at width of containing element. */
 
 /*
 
    UTILITIES
 
 */
+
+/* This is for fluid media that is embedded from third party sites like youtube, vimeo etc.
+ * Wrap the outer element in aspect-ratio and then extend it with the desired ratio i.e
+ * Make sure there are no height and width attributes on the embedded media.
+ * Adapted from: https://github.com/suitcss/components-flex-embed
+ *
+ * Example:
+ *
+ * <div class="aspect-ratio aspect-ratio--16x9">
+ *  <iframe class="aspect-ratio--object"></iframe>
+ * </div>
+ *
+ * */
 
 .center {
   margin-right: auto;
@@ -989,8 +956,8 @@ code {
 
 */
 
-/* 
-  
+/*
+
   Dim element on hover by adding the dim class.
 
 */
@@ -1013,7 +980,7 @@ code {
 
 /*
 
-  Hide child on hover:
+  Hide child & reveal on hover:
 
   Put the hide-child class on a parent element and any nested element with the
   child class will be hidden and displayed on hover or focus.
@@ -1026,6 +993,11 @@ code {
   </div>
 */
 
+/* Can combine this with overflow-hidden to make background images grow on hover
+ * even if you are using background-size: cover */
+
+/* Add pointer on hover */
+
 /*
 
   STYLES
@@ -1033,6 +1005,49 @@ code {
   Add custom styles here.
 
 */
+
+/* Import media queries at end as this will allow you to customize them
+ * and override what is currently declared in each module.
+ */
+
+/*
+
+  CUSTOM MEDIA QUERIES
+
+  Media query values can be changed to fit your own content.
+  There are no magic bullets when it comes to media query width values.
+  They should be declared in em units - and they should be set to meet
+  the needs of your content.
+
+  These media queries can be referenced like so:
+
+  @media (--breakpoint-not-small) {
+    .medium-and-larger-specific-style {
+      background-color: red;
+    }
+  }
+
+  @media (--breakpoint-medium) {
+    .medium-screen-specific-style {
+      background-color: red;
+    }
+  }
+
+  @media (--breakpoint-large) {
+    .large-screen-specific-style {
+      background-color: red;
+    }
+  }
+
+  @media (--breakpoint-extra-large) {
+    .extra-large-screen-specific-style {
+      background-color: red;
+    }
+  }
+
+*/
+
+/* DEBUGGING */
 
 /*
 
@@ -1043,11 +1058,32 @@ code {
 
 */
 
-/* Uncomment out this line if you want to debug your layout */
+/* Uncomment out this line and rebuild if you want to debug your layout.*/
 
 /* @import './_debug'; */
 
-@media screen and (min-width: 48em) {
+a {
+  color: #00449e;
+}
+
+code {
+  background-color: #f8f8f8;
+  padding: .2rem;
+}
+
+pre {
+  background-color: #fafafa;
+  border: thin solid #f8f8f8;
+  font-size: .9rem;
+  overflow-x: scroll;
+  padding: .5rem;
+}
+
+pre > code {
+  background-color: transparent;
+}
+
+@media screen and (min-width: 30em) {
   .pt4-ns {
     padding-top: 2rem;
   }
@@ -1055,5 +1091,9 @@ code {
   .pv4-ns {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .f1-ns {
+    font-size: 3rem;
   }
 }

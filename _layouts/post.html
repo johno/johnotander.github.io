@@ -2,15 +2,9 @@
 layout: default
 ---
 
-<div role="main">
-  <div class="container">
-    <div class="mt4 mb2">
-      <h3 class="h1 black mb0">{{page.title}}</h3>
-      <span class="h6 gray">{{ page.date | date: "%b %-d, %Y" }}</span>
-    </div>
+<h1 class="f2 f1-ns">{{page.title}}</h1>
+<span class="f6 mid-gray">{{ page.date | date: "%b %-d, %Y" }}</span>
 
-    <article>
-      {{ content }}
-    </article>
-  </div>
-</div>
+<article class="lh-copy f4">
+  {{ content }}
+</article>
