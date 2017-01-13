@@ -16,11 +16,11 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "glob": "^5.0.6",
-    "johno-api": "^1.4.0",
-    "js-yaml": "^3.3.0",
-    "tachyons": "^4.0.2",
-    "tachyons-cli": "^0.6.0",
-    "uncss": "^0.12.1"
+    "glob": "^7.1.1",
+    "johno-api": "^1.5.0",
+    "js-yaml": "^3.7.0",
+    "tachyons": "^4.6.1",
+    "tachyons-cli": "^1.0.10",
+    "uncss": "^0.14.1"
   }
 }

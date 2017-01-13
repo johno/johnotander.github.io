@@ -13,7 +13,7 @@ exclude:
 authorData:
   name: John Otander
   title: Software Engineer
-  company: A10 Networks
+  company: Clearbit
   email: johnotander@gmail.com
   gravatar_email: johnotander@gmail.com
   twitter: 4lpine
@@ -76,7 +76,9 @@ authorData:
         url: 'http://furtive.co'
         github_url: 'https://github.com/johnotander/furtive'
       - name: Scrutinize
-        description: 'Scrutinize a url by analyzing CSS, HTML, accessibility, images, pagespeed, etc.'
+        description: >-
+          Scrutinize a url by analyzing CSS, HTML, accessibility, images,
+          pagespeed, etc.
         url: 'https://github.com/johnotander/scrutinize'
         github_url: 'https://github.com/johnotander/scrutinize'
       - name: Ember Gravatar
@@ -96,6 +98,8 @@ authorData:
         url: 'http://johnotander.com/deleted/'
         github_url: 'https://github.com/johnotander/deleted'
       - name: Markdown CSS
-        description: 'A collection of CSS modules to make Markdown, or raw HTML, look beautiful.'
+        description: >-
+          A collection of CSS modules to make Markdown, or raw HTML, look
+          beautiful.
         url: 'http://markdowncss.github.io/'
         github_url: 'https://github.com/markdowncss'
