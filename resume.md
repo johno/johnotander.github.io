@@ -28,13 +28,13 @@ _Graduated with High Honors_
 
 ## Buzz Words
 
-Ruby, Rails, Javascript/Coffescript, Node, Ember, Ember CLI, React, Polymer, ES6, Bower, Gulp, Yeoman, jQuery, Jekyll, JSON, AJAX, CSS, Sass/Scss, Rework, PostCSS, Web Components, d3.js, HTML/HAML/Mustache/Handlebars, Git, SQL, Postgres, TDD, Agile development, AWS, C
+Ruby, Rails, Sinatra, Tachyons JavaScript/CoffeeScript, Node, React, Redux, Choo, Ember, Ember CLI, ES2015, Babel, Bower, Gulp, Yeoman, jQuery, Jekyll, JSON, AJAX, CSS, Sass/Scss, Rework, PostCSS, Web Components, d3.js, HTML/HAML/Mustache/Handlebars, Git, SQL, Postgres, TDD, Agile development, AWS, C
 
 ## Skills
 
-  - Full stack Ruby on Rails and Node development
+  - Full stack Ruby and Node development
   - Efficient, simple, and beautiful CSS/HTML
-  - Experienced building client side apps with Ember
+  - Experienced building client side apps with React and Ember
   - Ability to perform under pressure
   - Well versed in Software Development best practices
   - Astute attention to detail
@@ -42,10 +42,11 @@ Ruby, Rails, Javascript/Coffescript, Node, Ember, Ember CLI, React, Polymer, ES6
   - Practitioner of unobtrusive Javascript
   - Passionate about learning new technology
 
-## Notable Projects
+## Notable OSS Projects
 
-##### Personal
-
+* <https://github.com/tachyons-css>
+* <https://github.com/cssstats>
+* <https://github.com/johnotander/random-a11y>
 * <https://github.com/johnotander/pixyll>
 * <https://github.com/johnotander/furtive>
 * <https://github.com/johnotander/deleted>
@@ -54,19 +55,14 @@ Ruby, Rails, Javascript/Coffescript, Node, Ember, Ember CLI, React, Polymer, ES6
 * <https://github.com/johnotander/ember-cli-gravatar>
 * <https://github.com/johnotander/urls_for_humans>
 
-##### Contributing
-
-* <https://github.com/cssstats/cssstats>
-* <https://github.com/cssstats/css-statistics>
-* <https://github.com/cssstats/get-css>
-* <https://github.com/elabs/pundit>
-* <https://github.com/rwjblue/ember-cli-divshot>
-* <https://github.com/fourseven/pure-sass>
-
 ## Work Experience
 
+#### Clearbit, Software Engineer - Remote
+
+Building developer friendly APIs with Ruby and JavaScript.
+
 #### A10 Networks, Senior Software Engineer - Boise, ID
-_March 2014 - Present_
+_March 2014 - November 2016
  
 Responsible for developing and designing cloud configuration infrastructure for network appliances, including web apps, API design, and asset optimization. Tasked with developing an internal front end framework (Bootstrap wrapper) for all web products. Primary technologies: Ruby on Rails, Javascript, Gulp, Node, Ember, CSS, SCSS, Jekyll, and HTML.
 
