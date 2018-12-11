@@ -1,4 +1,4 @@
-# [johnotander,com](http://www.johnotander.com)
+# [johnotander.com](http://www.johnotander.com)
 
 ## Installation
 
