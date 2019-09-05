@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "alias": ["www.johnotander.com", "johnotander.com"],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "status": 301,
+      "headers": { "Location": "https://johno.com/$1" }
+    }
+  ]
+}
