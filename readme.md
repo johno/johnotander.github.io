@@ -1,12 +1,5 @@
-# [johnotander.com](http://www.johnotander.com)
+# johnotander.com
 
-## Installation
+This repo is now archived and redirects to johno.com.
 
-```sh
-git clone https://github.com/johnotander/johnotander.github.io.git && cd johnotander.github.io
-npm i && npm start
-```
-
-## License
-
-MIT
+[See the new repo](https://github.com/johno/_)
